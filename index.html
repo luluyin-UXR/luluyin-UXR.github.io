@@ -36,9 +36,9 @@
   /* NAV */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.96); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border); padding: 0 2.5rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
   .nav-logo-wrap { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-  .nav-name { font-family: 'DM Serif Display', serif; font-size: 1.05rem; color: var(--text); letter-spacing: -0.01em; line-height: 1.2; }
+  .nav-name { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: var(--text); letter-spacing: -0.01em; line-height: 1.2; }
   .nav-name span { color: var(--mint); }
-  .nav-title { font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.04em; }
+  .nav-title { font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.04em; }
   .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
   .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.84rem; font-weight: 400; transition: color var(--transition); }
   .nav-links a:hover { color: var(--mint); }
@@ -50,7 +50,7 @@
   .hero { max-width: 1200px; margin: 0 auto; padding: 9rem 2.5rem 6rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
   .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--gold-light); border: 1px solid rgba(200,137,10,0.3); border-radius: 20px; padding: 0.28rem 0.85rem; font-size: 0.73rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1.5rem; }
   .hero-tag::before { content: '◆'; font-size: 0.42rem; }
-  .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2.2rem, 4vw, 3.7rem); line-height: 1.12; letter-spacing: -0.03em; color: var(--text); margin-bottom: 0.3rem; }
+  .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.14; letter-spacing: -0.02em; color: var(--text); margin-bottom: 0.3rem; }
   .hero h1 em { color: var(--mint); font-style: italic; }
   .hero-subtitle { font-size: 0.97rem; color: var(--navy); font-weight: 500; letter-spacing: 0.02em; margin-bottom: 1.1rem; }
   .hero-sub { font-size: 0.94rem; color: var(--text-muted); line-height: 1.88; max-width: 510px; margin-bottom: 2rem; }
@@ -188,14 +188,57 @@
   .method-tag { background: #fff; border: 1px solid var(--border); border-radius: 4px; padding: 0.2rem 0.55rem; font-size: 0.73rem; color: var(--text-muted); }
   .mt-2 { margin-top: 2rem; }
 
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .hero { grid-template-columns: 1fr 1fr; gap: 2.5rem; padding: 8rem 2rem 5rem; }
+    .finance-inner { grid-template-columns: 1fr 1.5fr; gap: 2rem; }
+    .about-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .case-grid-3 { grid-template-columns: 1fr 1fr; }
+    section { padding: 4.5rem 2rem; }
+    .methods-inner { padding: 4.5rem 2rem; }
+  }
+
   @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem; }
-    .about-grid, .case-grid, .case-grid-3 { grid-template-columns: 1fr; }
-    .finance-inner { grid-template-columns: 1fr; gap: 1.5rem; }
-    nav { padding: 0 1.2rem; }
-    .nav-title, .nav-contact { display: none; }
-    section { padding: 4rem 1.5rem; }
+    nav { padding: 0 1.2rem; height: 58px; }
+    .nav-title { display: none; }
+    .nav-links { gap: 1.2rem; }
+    .nav-contact { font-size: 0.7rem; padding: 0.35rem 0.75rem; letter-spacing: 0; }
+    .hero { grid-template-columns: 1fr; padding: 6rem 1.5rem 3.5rem; gap: 2.5rem; }
+    .hero-right { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .case-grid { grid-template-columns: 1fr; }
+    .case-grid-3 { grid-template-columns: 1fr; }
+    .finance-inner { grid-template-columns: 1fr; gap: 1.2rem; }
     .case-header { grid-template-columns: 1fr; }
+    section { padding: 3.5rem 1.5rem; scroll-margin-top: 58px; }
+    .methods-inner { padding: 3.5rem 1.5rem; }
+    .finance-banner { padding: 2rem 1.5rem; }
+    .sector-band { padding: 0.8rem 1.5rem; gap: 0.8rem; }
+    .skills-strip { padding: 0.85rem 0; }
+    .cases-tabs { gap: 0.2rem; }
+    .case-tab { font-size: 0.74rem; padding: 0.5rem 0.7rem; }
+    .research-flow { flex-direction: column; }
+    .flow-step { border-radius: 8px !important; min-width: unset; }
+    .flow-step:not(:last-child)::after { display: none; }
+    .stat-num { font-size: 1.5rem; }
+  }
+
+  @media (max-width: 480px) {
+    nav { padding: 0 1rem; }
+    .nav-links { gap: 0.8rem; }
+    .nav-links li:nth-child(3) { display: none; }
+    .nav-contact { display: none; }
+    .hero { padding: 5.5rem 1.2rem 3rem; }
+    .hero-right { grid-template-columns: 1fr 1fr; }
+    .hero-cta { flex-direction: column; }
+    .hero-cta .btn { text-align: center; }
+    .hero h1 { font-size: clamp(1.75rem, 7vw, 2.5rem); }
+    section { padding: 3rem 1.2rem; }
+    .methods-inner { padding: 3rem 1.2rem; }
+    .finance-banner { padding: 1.8rem 1.2rem; }
+    .case-tab { font-size: 0.7rem; padding: 0.45rem 0.6rem; }
+    .chart-card, .info-card { padding: 1rem; }
+    .journey-table { font-size: 0.72rem; }
   }
 </style>
 </head>
@@ -204,12 +247,15 @@
 <!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo-wrap">
-    <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-      <rect width="36" height="36" rx="8" fill="#1a3566"/>
-      <rect x="4.5" y="4.5" width="27" height="27" rx="5.5" fill="none" stroke="#e8c56a" stroke-width="1.1" opacity="0.55"/>
-      <text x="18" y="23" text-anchor="middle" font-family="'DM Serif Display',Georgia,serif" font-size="13" font-style="italic" fill="#ffffff" letter-spacing="-0.5">LY</text>
-      <circle cx="29" cy="7" r="3.2" fill="#2a9d8f"/>
-      <circle cx="29" cy="7" r="1.8" fill="#e8c56a"/>
+    <svg width="40" height="40" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+      <!-- Teal background -->
+      <rect width="60" height="60" rx="11" fill="#1a6b5e"/>
+      <!-- White brushstroke arc — opens to the right, ~270° sweep -->
+      <path d="M 46 14 A 22 22 0 1 1 46 46" fill="none" stroke="rgba(255,255,255,0.96)" stroke-width="7.5" stroke-linecap="round"/>
+      <!-- Gold ink dot above signature -->
+      <circle cx="30" cy="20" r="2.4" fill="#c8890a"/>
+      <!-- Dark flowing signature across the arc -->
+      <path d="M 5 31 C 9 22 13 38 19 29 C 23 23 26 36 31 27 C 35 20 39 32 45 26 C 48 22 52 30 56 27" fill="none" stroke="#1a1a2e" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     <div>
       <div class="nav-name">Dr Lulu <span>Yin</span></div>
@@ -217,10 +263,10 @@
     </div>
   </a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#cases">Work</a></li>
-    <li><a href="#methods">Methods</a></li>
-    <li><a id="nav-email" href="#" class="nav-contact">yinlulu07@gmail.com</a></li>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#cases">Case Studies</a></li>
+    <li><a href="#methods">Methods and Tools</a></li>
+    <li><a id="nav-email" href="/cdn-cgi/l/email-protection#81f8e8efedf4edf4b1b6c1e6ece0e8edafe2eeec" class="nav-contact"><span class="__cf_email__" data-cfemail="8af3e3e4e6ffe6ffbabdcaede7ebe3e6a4e9e5e7">[email&#160;protected]</span></a></li>
   </ul>
 </nav>
 
@@ -229,31 +275,30 @@
   <div class="hero">
     <div class="hero-left">
       <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem;">
-        <svg width="58" height="58" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
-          <rect width="58" height="58" rx="13" fill="#1a3566"/>
-          <rect x="6.5" y="6.5" width="45" height="45" rx="9" fill="none" stroke="#e8c56a" stroke-width="1.6" opacity="0.48"/>
-          <text x="29" y="38" text-anchor="middle" font-family="'DM Serif Display',Georgia,serif" font-size="21" font-style="italic" fill="#ffffff" letter-spacing="-0.8">LY</text>
-          <circle cx="47" cy="11" r="5.2" fill="#2a9d8f"/>
-          <circle cx="47" cy="11" r="2.9" fill="#e8c56a"/>
+        <svg width="64" height="64" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <rect width="60" height="60" rx="11" fill="#1a6b5e"/>
+          <path d="M 46 14 A 22 22 0 1 1 46 46" fill="none" stroke="rgba(255,255,255,0.96)" stroke-width="7.5" stroke-linecap="round"/>
+          <circle cx="30" cy="20" r="2.4" fill="#c8890a"/>
+          <path d="M 5 31 C 9 22 13 38 19 29 C 23 23 26 36 31 27 C 35 20 39 32 45 26 C 48 22 52 30 56 27" fill="none" stroke="#1a1a2e" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <div>
-          <div style="font-size:0.7rem;color:var(--navy);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;margin-bottom:0.2rem;">Dr Lulu Yin</div>
-          <div class="hero-tag" style="margin-bottom:0;">Senior UX / CX Researcher</div>
+          <div style="font-size:1.25rem;color:var(--text);font-family:'DM Serif Display',serif;font-weight:400;letter-spacing:-0.01em;line-height:1.2;">Dr Lulu Yin</div>
+          <div style="font-size:0.88rem;color:var(--text-muted);margin-top:0.2rem;letter-spacing:0.03em;">Senior UX / CX Researcher</div>
         </div>
       </div>
-      <h1>Research that <em>connects</em> users to better products</h1>
+      <h1>Drive better products, services, and businesses through <em>research</em></h1>
       <div class="hero-subtitle">6+ years across Finance, Marketplace, Cultural and Immersive sectors · B2B and B2C · London, UK</div>
-      <p class="hero-sub">I bring experience across both <strong>B2B enterprise products</strong> and <strong>B2C consumer platforms</strong>, spanning banking, fintech, investment, marketplace and cultural sectors. My strongest depth is in regulated financial environments, particularly at <strong>JPMorgan Chase</strong>, where I led strategic B2B research that shaped roadmaps and product decisions at scale. Wherever the context, I translate user insight into clear, commercially grounded recommendations.</p>
+      <p class="hero-sub" style="color:#404040;">I bring experience across both <strong>B2B enterprise products</strong> and <strong>B2C consumer platforms</strong>, spanning banking, fintech, investment, marketplace and cultural sectors. My strongest depth is in regulated financial environments, particularly at <strong>JPMorgan Chase</strong>, where I led strategic B2B research that shaped roadmaps and product decisions at scale. Wherever the context, I translate user insight into clear, commercially grounded recommendations.</p>
       <div class="hero-cta">
-        <a href="#cases" class="btn btn-navy">View case studies</a>
         <a href="#about" class="btn btn-mint">About me</a>
-        <a id="hero-email" href="mailto:yinlulu07@gmail.com" class="btn btn-outline">yinlulu07@gmail.com</a>
+        <a href="#cases" class="btn btn-navy">View case studies</a>
+        <a id="hero-email" href="/cdn-cgi/l/email-protection#c1b8a8afadb4adb4f1f681a6aca0a8adefa2aeac" class="btn btn-outline"><span class="__cf_email__" data-cfemail="3f465651534a534a0f087f58525e5653115c5052">[email&#160;protected]</span></a>
       </div>
     </div>
     <div class="hero-right">
-      <div class="stat-card"><div class="stat-icon gold">🏦</div><div><div class="stat-num">4+</div><div class="stat-lbl">Years in Banking and Fintech, including JPMorgan Chase</div></div></div>
-      <div class="stat-card"><div class="stat-icon navy">🔁</div><div><div class="stat-num">B2B+B2C</div><div class="stat-lbl">Enterprise tools to consumer platforms</div></div></div>
-      <div class="stat-card"><div class="stat-icon mint">🔬</div><div><div class="stat-num">6+</div><div class="stat-lbl">Years of end-to-end research across multiple sectors</div></div></div>
+      <div class="stat-card"><div class="stat-icon gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="7" width="10" height="10" rx="1.5" stroke="#c8890a" stroke-width="1.8"/><line x1="10" y1="7" x2="10" y2="3" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/><line x1="14" y1="7" x2="14" y2="3" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/><line x1="10" y1="21" x2="10" y2="17" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/><line x1="14" y1="21" x2="14" y2="17" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/><line x1="7" y1="10" x2="3" y2="10" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/><line x1="7" y1="14" x2="3" y2="14" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/><line x1="21" y1="10" x2="17" y2="10" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/><line x1="21" y1="14" x2="17" y2="14" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/></svg></div><div><div class="stat-num">4+</div><div class="stat-lbl">Years in Banking and Fintech, including JPMorgan Chase</div></div></div>
+      <div class="stat-card"><div class="stat-icon navy"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 4 12.8V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.2A7 7 0 0 1 12 2Z" stroke="#1a3566" stroke-width="1.8" stroke-linejoin="round"/><line x1="9.5" y1="21" x2="14.5" y2="21" stroke="#1a3566" stroke-width="1.8" stroke-linecap="round"/><line x1="10.5" y1="18" x2="10.5" y2="21" stroke="#1a3566" stroke-width="1.4" stroke-linecap="round"/><line x1="13.5" y1="18" x2="13.5" y2="21" stroke="#1a3566" stroke-width="1.4" stroke-linecap="round"/><line x1="9" y1="12" x2="15" y2="12" stroke="#1a3566" stroke-width="1.4" stroke-linecap="round"/><line x1="10" y1="9.5" x2="14" y2="9.5" stroke="#1a3566" stroke-width="1.3" stroke-linecap="round"/></svg></div><div><div class="stat-num">B2B+B2C</div><div class="stat-lbl">Enterprise tools to consumer platforms</div></div></div>
+      <div class="stat-card"><div class="stat-icon mint">🔍</div><div><div class="stat-num">6+</div><div class="stat-lbl">Years of end-to-end research across multiple sectors</div></div></div>
       <div class="stat-card"><div class="stat-icon gold">🎓</div><div><div class="stat-num">PhD</div><div class="stat-lbl">Design, Brunel University London</div></div></div>
     </div>
   </div>
@@ -267,16 +312,14 @@
       <div class="finance-title">B2B and B2C Research <em>Across Sectors</em></div>
     </div>
     <div>
-      <p class="finance-desc">My experience spans both B2B enterprise products and B2C consumer platforms across banking, fintech, investment, marketplace and cultural sectors. My deepest specialism is in regulated financial services. At <strong style="color:var(--gold);">JPMorgan Chase</strong>, I led strategic B2B research across fintech products, shaping roadmap decisions for enterprise tools used by product and operations teams. At Capco I delivered research for Tier 1 UK banks including HSBC, NatWest, Lloyds and Santander. At Gumtree I research consumer selling behaviour at scale. This breadth means I move comfortably between complex enterprise contexts and fast-moving consumer environments.</p>
+      <p class="finance-desc">My experience spans both B2B enterprise products and B2C consumer platforms across banking, fintech, investment, marketplace and cultural sectors. My deepest specialism is in regulated financial services. At <strong>JPMorgan Chase</strong>, I led strategic B2B research across fintech products, shaping roadmap decisions for enterprise tools used by product and operations teams. At Capco I delivered research for Tier 1 UK banks including NatWest and other major institutions. At Gumtree I research consumer selling behaviour at scale. This breadth means I move comfortably between complex enterprise contexts and fast-moving consumer environments.</p>
       <div class="finance-pills">
         <span class="fin-pill gold">JPMorgan Chase</span>
         <span class="fin-pill gold">Capco</span>
-        <span class="fin-pill gold">HSBC</span>
         <span class="fin-pill gold">NatWest</span>
-        <span class="fin-pill gold">Lloyds</span>
-        <span class="fin-pill gold">Santander</span>
         <span class="fin-pill">B2B Fintech</span>
         <span class="fin-pill">Commercial Banking</span>
+        <span class="fin-pill">Banking SaaS</span>
         <span class="fin-pill">Investment Platforms</span>
         <span class="fin-pill">B2C Marketplace</span>
         <span class="fin-pill">Cultural and Immersive</span>
@@ -299,10 +342,10 @@
   <h2 class="section-title">About Me</h2>
   <div class="about-grid">
     <div class="about-text">
-      <p>I am a <strong>Senior UX/CX Researcher</strong> with over six years of experience across B2B and B2C products, spanning banking, fintech, investment, marketplace and cultural sectors. I specialise in turning user insight into decisions that actually shape products.</p>
-      <p>My deepest specialism is in regulated financial services. At <strong>JPMorgan Chase</strong>, I led strategic B2B research for enterprise fintech products, directly informing roadmaps and feature prioritisation. At <strong>Capco</strong>, I delivered research for Tier 1 UK banks including HSBC, NatWest, Lloyds and Santander. At <strong>With Intelligence</strong>, I built the customer segmentation model and JTBD framework that guided product and go-to-market strategy.</p>
-      <p>Currently at <strong>Gumtree</strong>, I research B2C seller behaviour at scale, keeping my thinking grounded in both enterprise complexity and everyday consumer needs.</p>
-      <p>I hold a <strong>PhD in Design from Brunel University London</strong> and am based in Uxbridge, UK. I am looking for a senior research role where research genuinely drives product strategy.</p>
+      <p style="color:#404040;">I am a <strong>Senior UX/CX Researcher</strong> with over six years of experience across B2B and B2C products, spanning banking, fintech, investment, marketplace and cultural sectors. I specialise in turning user insight into decisions that actually shape products.</p>
+      <p style="color:#404040;">My deepest specialism is in regulated financial services. At <strong>JPMorgan Chase</strong>, I led strategic B2B research for enterprise fintech products, directly informing roadmaps and feature prioritisation. At <strong>Capco</strong>, I delivered research for Tier 1 UK banks including NatWest and other major institutions. At <strong>With Intelligence</strong>, I built the customer segmentation model and JTBD framework that guided product and go-to-market strategy.</p>
+      <p style="color:#404040;">Currently at <strong>Gumtree</strong>, I research B2C seller behaviour at scale, keeping my thinking grounded in both enterprise complexity and everyday consumer needs.</p>
+      <p style="color:#404040;">I hold a <strong>PhD in Design from Brunel University London</strong> and am based in Uxbridge, UK. I am looking for a senior research role where research genuinely drives product strategy.</p>
       <div style="margin-top:1rem;">
         <div style="font-size:0.72rem;color:var(--text-dim);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.08em;font-weight:500;">Sector coverage</div>
         <div>
@@ -340,7 +383,7 @@
   <p class="section-desc">Four projects across B2B fintech, commercial banking, marketplace and cultural research, each showing how I connect user insight to product and business strategy.</p>
 
   <div class="cases-tabs mt-2">
-    <button class="case-tab active" onclick="switchCase(0)">01 · Chase Bank Journey Builder</button>
+    <button class="case-tab active" onclick="switchCase(0)">01 · Banking Business Journey Builder</button>
     <button class="case-tab" onclick="switchCase(1)">02 · Commercial Banking Platform</button>
     <button class="case-tab" onclick="switchCase(2)">03 · Gumtree Super Sellers</button>
     <button class="case-tab" onclick="switchCase(3)">04 · National Gallery AR</button>
@@ -350,17 +393,17 @@
   <div class="case-panel active" id="case-0">
     <div class="case-header">
       <div>
-        <div class="case-title">Improving the Journey Building Experience at Chase Bank</div>
-        <div class="case-subtitle">Strategic B2B research for Servicing and OKYC product teams · JPMorgan Chase &amp; Co, London</div>
+        <div class="case-title">Banking Business Journey Builder</div>
+        <div class="case-subtitle">Strategic B2B research for Servicing and OKYC product teams · Global Banking and Fintech, London</div>
         <div class="tags-wrap"><span class="method-tag">Customer Interviews</span><span class="method-tag">Competitor Analysis</span><span class="method-tag">Concept Testing</span><span class="method-tag">B2B Fintech</span><span class="method-tag">Enterprise Tool Design</span></div>
       </div>
-      <span class="case-badge gold-badge">Senior UX Researcher · JPMorgan · 2024 to 2025</span>
+      <span class="case-badge gold-badge">Senior UX Researcher · 2024 to 2025</span>
     </div>
 
     <div class="case-grid">
       <div class="info-card">
         <h4>The Business Problem</h4>
-        <p>At Chase Bank, building business journeys (the workflows that define how tasks like customer onboarding run end to end) is a core activity for Servicing and OKYC product teams. The current process is heavily engineering-dependent. Product Managers spend significant time translating product requirements into technical specifications, creating repeated back-and-forth cycles, higher implementation risk and consistently long launch timelines.</p>
+        <p>At a bank, building business journeys (the workflows that define how tasks like customer onboarding run end to end) is a core activity for Servicing and OKYC product teams. The current process is heavily engineering-dependent. Product Managers spend significant time translating product requirements into technical specifications, creating repeated back-and-forth cycles, higher implementation risk and consistently long launch timelines.</p>
       </div>
       <div class="info-card">
         <h4>Research Objectives</h4>
@@ -395,12 +438,12 @@
       </div>
       <div class="chart-card">
         <h4>Study 2 · Competitive Feature Tiers</h4>
-        <div style="position:relative;width:100%;height:245px;"><canvas id="chartFeatures"></canvas></div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:0.7rem;font-size:0.72rem;color:var(--text-muted);">
-          <span style="display:flex;align-items:center;gap:4px;"><span style="width:9px;height:9px;border-radius:2px;background:#1a3566;display:inline-block;"></span>Tier 1: Essential</span>
-          <span style="display:flex;align-items:center;gap:4px;"><span style="width:9px;height:9px;border-radius:2px;background:#1a6b5e;display:inline-block;"></span>Tier 2: Valuable</span>
-          <span style="display:flex;align-items:center;gap:4px;"><span style="width:9px;height:9px;border-radius:2px;background:#c8890a;display:inline-block;"></span>Tier 3: Innovative</span>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0.75rem;">
+          <span style="display:flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:#1a3566;display:inline-block;flex-shrink:0;"></span>Tier 1: Essential</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:#1a6b5e;display:inline-block;flex-shrink:0;"></span>Tier 2: Valuable</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:#c8890a;display:inline-block;flex-shrink:0;"></span>Tier 3: Innovative</span>
         </div>
+        <div style="position:relative;width:100%;height:310px;"><canvas id="chartFeatures"></canvas></div>
       </div>
     </div>
 
@@ -447,14 +490,9 @@
 
     <div class="case-grid">
       <div class="chart-card">
-        <h4>Research Scale, Participants and Outreach</h4>
+        <h4>Platform Usability Assessment, Key Pain Areas</h4>
         <div style="position:relative;width:100%;height:245px;"><canvas id="chartBanking"></canvas></div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:0.7rem;font-size:0.72rem;color:var(--text-muted);">
-          <span style="display:flex;align-items:center;gap:4px;"><span style="width:9px;height:9px;border-radius:50%;background:#1a3566;display:inline-block;"></span>Profiles Reviewed</span>
-          <span style="display:flex;align-items:center;gap:4px;"><span style="width:9px;height:9px;border-radius:50%;background:#1a6b5e;display:inline-block;"></span>Reached Out</span>
-          <span style="display:flex;align-items:center;gap:4px;"><span style="width:9px;height:9px;border-radius:50%;background:#c8890a;display:inline-block;"></span>Interviews Conducted</span>
-          <span style="display:flex;align-items:center;gap:4px;"><span style="width:9px;height:9px;border-radius:50%;background:#2a9d8f;display:inline-block;"></span>Survey Responses</span>
-        </div>
+        <p style="font-size:0.75rem;color:var(--text-dim);margin-top:0.7rem;">Severity scores (1 to 5) derived from usability evaluation and customer interviews. Admin function scored highest due to redundant roles, overlong privilege lists and heavy dependency on bank support teams.</p>
       </div>
       <div class="chart-card"><h4>Redesigned Admin Model, Five User Roles</h4><div style="position:relative;width:100%;height:245px;"><canvas id="chartRoles"></canvas></div></div>
     </div>
@@ -604,13 +642,11 @@
 
 <!-- FOOTER -->
 <footer>
-  <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
-    <rect width="44" height="44" rx="10" fill="#1a3566"/>
-    <rect x="5.5" y="5.5" width="33" height="33" rx="7" fill="none" stroke="#e8c56a" stroke-width="1.3" opacity="0.48"/>
-    <text x="22" y="29" text-anchor="middle" font-family="'DM Serif Display',Georgia,serif" font-size="16" font-style="italic" fill="#ffffff" letter-spacing="-0.5">LY</text>
-    <circle cx="36" cy="8" r="4.2" fill="#2a9d8f"/>
-    <circle cx="36" cy="8" r="2.3" fill="#e8c56a"/>
-  </svg>
+  <svg width="52" height="52" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1rem;">
+    <rect width="60" height="60" rx="11" fill="#1a6b5e"/>
+    <path d="M 46 14 A 22 22 0 1 1 46 46" fill="none" stroke="rgba(255,255,255,0.96)" stroke-width="7.5" stroke-linecap="round"/>
+    <circle cx="30" cy="20" r="2.4" fill="#c8890a"/>
+    <path d="M 5 31 C 9 22 13 38 19 29 C 23 23 26 36 31 27 C 35 20 39 32 45 26 C 48 22 52 30 56 27" fill="none" stroke="#1a1a2e" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
   <div style="font-family:'DM Serif Display',serif;font-size:1.35rem;color:var(--text);margin-bottom:0.38rem;">Dr Lulu Yin</div>
   <div style="margin-bottom:0.38rem;color:var(--text-muted);">Senior UX / CX Researcher · Uxbridge, UK</div>
@@ -618,25 +654,17 @@
   <div style="margin-top:1.4rem;font-size:0.71rem;color:var(--text-dim);">Portfolio 2026</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
   var u='yinlulu07',d='gmail.com',e=u+'@'+d;
-  // Nav contact
   var nc=document.getElementById('nav-email');
   if(nc){nc.href='mailto:'+e;nc.textContent=e;}
-  // Hero email button
   var hb=document.getElementById('hero-email');
   if(hb){hb.href='mailto:'+e;hb.textContent=e;}
-  // Footer
   var fw=document.getElementById('footer-email-wrap');
-  if(fw){
-    var a=document.createElement('a');
-    a.href='mailto:'+e;a.textContent=e;a.style.color='var(--mint)';a.style.fontWeight='500';
-    fw.prepend(a);
-  }
+  if(fw){var a=document.createElement('a');a.href='mailto:'+e;a.textContent=e;a.style.color='var(--mint)';a.style.fontWeight='500';fw.prepend(a);}
 })();
 
-// Charts — lazy init so hidden tab panels don't error
 var mt='#3d6b65',gc='rgba(26,107,94,0.09)';
 var base={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{color:mt,font:{size:10}},grid:{color:gc},border:{color:'transparent'}},y:{ticks:{color:mt,font:{size:10}},grid:{color:gc},border:{color:'transparent'}}}};
 var initialised={};
@@ -646,21 +674,137 @@ function buildChart(id){
   initialised[id]=true;
   var el=document.getElementById(id);
   if(!el)return;
+
   if(id==='chartWorkflow'){
-    new Chart(el,{type:'bar',data:{labels:['Requirement\nCollection','Requirement\nTranslation','Implementation','Testing','Production'],datasets:[{label:'Product',data:[90,70,15,25,20],backgroundColor:'rgba(26,107,94,0.82)',borderRadius:4},{label:'Engineering',data:[20,60,95,80,70],backgroundColor:'rgba(42,157,143,0.75)',borderRadius:4},{label:'Shared',data:[40,30,10,45,30],backgroundColor:'rgba(200,137,10,0.72)',borderRadius:4}]},options:Object.assign({},base,{plugins:{legend:{display:false},tooltip:{callbacks:{label:function(ctx){return ctx.dataset.label+': '+ctx.raw+'%';} }}},scales:{x:{stacked:false,ticks:{color:mt,font:{size:9},maxRotation:0},grid:{color:gc},border:{color:'transparent'}},y:{ticks:{color:mt,font:{size:10},callback:function(v){return v+'%';}},grid:{color:gc},border:{color:'transparent'},max:100}}})});
+    new Chart(el,{type:'bar',data:{
+      labels:['Requirement\nCollection','Requirement\nTranslation','Implementation','Testing','Production'],
+      datasets:[
+        {label:'Product',data:[90,70,15,25,20],backgroundColor:'rgba(26,107,94,0.82)',borderRadius:4},
+        {label:'Engineering',data:[20,60,95,80,70],backgroundColor:'rgba(42,157,143,0.75)',borderRadius:4},
+        {label:'Shared',data:[40,30,10,45,30],backgroundColor:'rgba(200,137,10,0.72)',borderRadius:4}
+      ]},options:Object.assign({},base,{
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:function(ctx){return ctx.dataset.label+': '+ctx.raw+'%';}}}},
+        scales:{
+          x:{stacked:false,ticks:{color:mt,font:{size:9},maxRotation:0},grid:{color:gc},border:{color:'transparent'}},
+          y:{ticks:{color:mt,font:{size:10},callback:function(v){return v+'%';}},grid:{color:gc},border:{color:'transparent'},max:100}
+        }
+      })
+    });
+
   } else if(id==='chartFeatures'){
-    new Chart(el,{type:'bar',data:{labels:['Integration\nConnectors','Journey\nMgmt','Library\nDev Mode','Collaborative\nWorkflows','Testing\nSimulation','AI-Driven'],datasets:[{data:[3,3,2,2,2,1],backgroundColor:['#1a3566','#1a3566','#1a6b5e','#1a6b5e','#1a6b5e','#c8890a'],borderRadius:4}]},options:Object.assign({},base,{scales:{x:{ticks:{color:mt,font:{size:8},maxRotation:0},grid:{color:gc},border:{color:'transparent'}},y:{ticks:{color:mt,font:{size:10},callback:function(v){return['','Tier 3','Tier 2','Tier 1'][v]||'';}},grid:{color:gc},border:{color:'transparent'},max:3,min:0}}})});
+    // Horizontal grouped bar: each feature shows % of 10 competitors supporting it, coloured by tier
+    new Chart(el,{type:'bar',data:{
+      labels:['Integration Connectors','Journey Management','Library & Dev Mode','Collaborative Workflows','Journey Migration','Testing & Simulation','AI-Driven Approaches'],
+      datasets:[{
+        label:'Competitor adoption (%)',
+        data:[80,90,60,40,30,50,20],
+        backgroundColor:['#1a3566','#1a3566','#1a6b5e','#1a6b5e','#1a6b5e','#1a6b5e','#c8890a'],
+        borderRadius:4,
+        barThickness:22
+      }]},options:{
+        indexAxis:'y',
+        responsive:true,maintainAspectRatio:false,
+        layout:{padding:{left:0,right:8,top:0,bottom:0}},
+        plugins:{
+          legend:{display:false},
+          tooltip:{callbacks:{label:function(ctx){
+            var tiers=['Tier 1','Tier 1','Tier 2','Tier 2','Tier 2','Tier 2','Tier 3'];
+            return tiers[ctx.dataIndex]+' · '+ctx.raw+'% of competitors';
+          }}}
+        },
+        scales:{
+          x:{ticks:{color:mt,font:{size:9},callback:function(v){return v+'%';}},grid:{color:gc},border:{color:'transparent'},max:100,min:0},
+          y:{ticks:{color:mt,font:{size:9},crossAlign:'far'},grid:{display:false},border:{color:'transparent'}}
+        }
+      }
+    });
+
   } else if(id==='chartBanking'){
-    new Chart(el,{type:'bar',data:{labels:['Profiles\nReviewed','Customers\nReached','Interviews\nConducted','Survey\nResponses'],datasets:[{data:[3000,637,25,48],backgroundColor:['#1a3566','#1a6b5e','#c8890a','#2a9d8f'],borderRadius:4}]},options:Object.assign({},base,{scales:{x:{ticks:{color:mt,font:{size:9},maxRotation:0},grid:{color:gc},border:{color:'transparent'}},y:{type:'logarithmic',ticks:{color:mt,font:{size:10},callback:function(v){return v>=1000?(v/1000)+'k':v;}},grid:{color:gc},border:{color:'transparent'}}}})});
+    // Platform usability pain severity by area
+    new Chart(el,{type:'bar',data:{
+      labels:['Admin / User Roles','Navigation','Onboarding','System Response','Visual Design'],
+      datasets:[{
+        label:'Pain Severity',
+        data:[5,3.5,3,2.5,2],
+        backgroundColor:['#c8890a','#1a3566','#1a6b5e','#2a9d8f','#2550a0'],
+        borderRadius:4
+      }]},options:{
+        indexAxis:'y',
+        responsive:true,maintainAspectRatio:false,
+        plugins:{
+          legend:{display:false},
+          tooltip:{callbacks:{label:function(ctx){
+            var labels=['Critical — most urgent pain point','High — confusing structure','Medium — lacks guided onboarding','Medium — absent feedback cues','Lower — outdated but functional'];
+            return labels[ctx.dataIndex];
+          }}}
+        },
+        scales:{
+          x:{ticks:{color:mt,font:{size:9},stepSize:1,callback:function(v){return['','Very Low','Low','Medium','High','Critical'][v]||'';}},grid:{color:gc},border:{color:'transparent'},min:0,max:5},
+          y:{ticks:{color:mt,font:{size:10}},grid:{display:false},border:{color:'transparent'}}
+        }
+      }
+    });
+
   } else if(id==='chartRoles'){
-    new Chart(el,{type:'doughnut',data:{labels:['Admin Users','Payment Users','Approvers','Viewers','Custom Role'],datasets:[{data:[25,30,20,15,10],backgroundColor:['#1a3566','#1a6b5e','#c8890a','#2a9d8f','#2550a0'],borderColor:'#f7faf9',borderWidth:3}]},options:{responsive:true,maintainAspectRatio:false,cutout:'62%',plugins:{legend:{display:true,position:'bottom',labels:{color:mt,font:{size:10},padding:10,boxWidth:10,boxHeight:10,usePointStyle:true}},tooltip:{callbacks:{label:function(ctx){return ctx.label+': representative share';}}}}}});
+    new Chart(el,{type:'doughnut',data:{
+      labels:['Admin Users','Payment Users','Approvers','Viewers','Custom Role'],
+      datasets:[{data:[25,30,20,15,10],backgroundColor:['#1a3566','#1a6b5e','#c8890a','#2a9d8f','#2550a0'],borderColor:'#f7faf9',borderWidth:3}]},
+      options:{responsive:true,maintainAspectRatio:false,cutout:'62%',plugins:{
+        legend:{display:true,position:'bottom',labels:{color:mt,font:{size:10},padding:10,boxWidth:10,boxHeight:10,usePointStyle:true}},
+        tooltip:{callbacks:{label:function(ctx){return ctx.label+': representative share';}}}
+      }}
+    });
+
   } else if(id==='chartOpportunities'){
-    var oppData=[5,5,5,5,5,5,3,3,3,3];
-    new Chart(el,{type:'bar',data:{labels:['Facilitate\nExchange','Improve\nComms','Support\nPosting','Review\nSystem','Re-post\nProcess','Pay and Ship','Bundle\nSales','Set Sales','Group\nPosts','Ad\nReporting'],datasets:[{data:oppData,backgroundColor:oppData.map(function(v){return v>=5?'#1a6b5e':'#1a3566';}),borderRadius:4}]},options:Object.assign({},base,{plugins:{legend:{display:false},tooltip:{callbacks:{label:function(ctx){return oppData[ctx.dataIndex]>=5?'Priority 0 to 1 (High)':'Priority 2 to 3 (Medium)';} }}},scales:{x:{ticks:{color:mt,font:{size:8},maxRotation:0},grid:{color:gc},border:{color:'transparent'}},y:{ticks:{display:false},grid:{display:false},border:{color:'transparent'},max:6}}})});
+    // Horizontal bar sorted by priority with proper labels
+    new Chart(el,{type:'bar',data:{
+      labels:[
+        'Facilitate Effective Exchange','Improve Comms System','Support Effective Posting',
+        'Effective Review System','Improve Re-post Process','Pay and Ship Optimisation',
+        'Support Bundle Sales','Support Set Sales','Support Group Posts','Ad Performance Reporting'
+      ],
+      datasets:[{
+        label:'Priority Score',
+        data:[5,5,5,5,5,5,3,3,3,3],
+        backgroundColor:['#1a6b5e','#1a6b5e','#1a6b5e','#1a6b5e','#1a6b5e','#1a6b5e','#1a3566','#1a3566','#1a3566','#1a3566'],
+        borderRadius:4
+      }]},options:{
+        indexAxis:'y',
+        responsive:true,maintainAspectRatio:false,
+        plugins:{
+          legend:{display:false},
+          tooltip:{callbacks:{label:function(ctx){
+            return ctx.dataset.data[ctx.dataIndex]>=5?'Priority 0 to 1, High impact':'Priority 2 to 3, Medium impact';
+          }}}
+        },
+        scales:{
+          x:{ticks:{color:mt,font:{size:9},stepSize:1,callback:function(v){return['','P3','P2','P1 (Med)','','P0 (High)'][v]||'';}},grid:{color:gc},border:{color:'transparent'},min:0,max:6},
+          y:{ticks:{color:mt,font:{size:9}},grid:{display:false},border:{color:'transparent'}}
+        }
+      }
+    });
+
   } else if(id==='chartGallery'){
-    new Chart(el,{type:'radar',data:{labels:['Engagement','Immersion','Presence','Comprehension','Ease of Use','Navigation','Interest to Visit'],datasets:[{label:'Testing Results',data:[92,80,78,72,68,65,88],backgroundColor:'rgba(26,107,94,0.1)',borderColor:'#1a6b5e',borderWidth:2,pointBackgroundColor:'#c8890a',pointRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{r:{ticks:{color:mt,font:{size:9},backdropColor:'transparent',stepSize:20},grid:{color:'rgba(26,107,94,0.1)'},pointLabels:{color:mt,font:{size:10}},min:0,max:100}}}});
+    new Chart(el,{type:'radar',data:{
+      labels:['Engagement','Immersion','Presence','Comprehension','Ease of Use','Navigation','Interest to Visit'],
+      datasets:[{label:'Testing Results',data:[92,80,78,72,68,65,88],backgroundColor:'rgba(26,107,94,0.1)',borderColor:'#1a6b5e',borderWidth:2,pointBackgroundColor:'#c8890a',pointRadius:4}]},
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+        scales:{r:{ticks:{color:mt,font:{size:9},backdropColor:'transparent',stepSize:20},grid:{color:'rgba(26,107,94,0.1)'},pointLabels:{color:mt,font:{size:10}},min:0,max:100}}
+      }
+    });
+
   } else if(id==='chartMethods'){
-    new Chart(el,{type:'bar',data:{labels:['User Interviews','Competitor Analysis','Surveys','Concept Testing','Usability Testing','Journey Mapping','Co-design','Field Studies','Desk Research'],datasets:[{data:[4,2,2,2,2,2,1,1,1],backgroundColor:['#1a3566','#1a6b5e','#c8890a','#2a9d8f','#2550a0','#1a6b5e','#c8890a','#1a3566','#2a9d8f'],borderRadius:4}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(ctx){return 'Used in '+ctx.raw+' project(s)';} }}},scales:{x:{ticks:{color:mt,font:{size:10},stepSize:1,callback:function(v){return v+(v===1?' project':' projects');}},grid:{color:gc},border:{color:'transparent'},max:5},y:{ticks:{color:mt,font:{size:10}},grid:{display:false},border:{color:'transparent'}}}}});
+    new Chart(el,{type:'bar',data:{
+      labels:['User Interviews','Competitor Analysis','Surveys','Concept Testing','Usability Testing','Journey Mapping','Co-design','Field Studies','Desk Research'],
+      datasets:[{data:[4,2,2,2,2,2,1,1,1],backgroundColor:['#1a3566','#1a6b5e','#c8890a','#2a9d8f','#2550a0','#1a6b5e','#c8890a','#1a3566','#2a9d8f'],borderRadius:4}]},
+      options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:function(ctx){return 'Used in '+ctx.raw+' project(s)';} }}},
+        scales:{
+          x:{ticks:{color:mt,font:{size:10},stepSize:1,callback:function(v){return v+(v===1?' project':' projects');}},grid:{color:gc},border:{color:'transparent'},max:5},
+          y:{ticks:{color:mt,font:{size:10}},grid:{display:false},border:{color:'transparent'}}
+        }
+      }
+    });
   }
 }
 
@@ -680,7 +824,55 @@ function switchCase(idx){
 document.addEventListener('DOMContentLoaded',function(){
   tabCharts[0].forEach(buildChart);
   buildChart('chartMethods');
+
+  // Back to top — show only after finance banner (Core Expertise section)
+  var btn = document.getElementById('back-to-top');
+  var trigger = document.querySelector('.finance-banner');
+  if(btn && trigger){
+    var triggerOffset = 0;
+    function updateTrigger(){
+      triggerOffset = trigger.getBoundingClientRect().top + window.pageYOffset;
+    }
+    updateTrigger();
+    window.addEventListener('resize', updateTrigger);
+    window.addEventListener('scroll', function(){
+      if(window.pageYOffset > triggerOffset){
+        btn.classList.add('btt-visible');
+      } else {
+        btn.classList.remove('btt-visible');
+      }
+    }, {passive:true});
+    btn.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
 });
 </script>
-</body>
-</html>
+
+<!-- BACK TO TOP -->
+<button id="back-to-top" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<style>
+  #back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--mint);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(26,107,94,0.28);
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition: op
