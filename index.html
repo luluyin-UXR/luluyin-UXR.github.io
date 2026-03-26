@@ -53,7 +53,7 @@
   .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; line-height: 1.14; letter-spacing: -0.02em; color: var(--text); margin-bottom: 0.3rem; }
   .hero h1 em { color: var(--mint); font-style: italic; }
   .hero-subtitle { font-size: 0.97rem; color: var(--navy); font-weight: 500; letter-spacing: 0.02em; margin-bottom: 1.1rem; }
-  .hero-sub { font-size: 0.94rem; color: var(--text-muted); line-height: 1.88; max-width: 510px; margin-bottom: 2rem; }
+  .hero-sub { font-size: 0.94rem; color: var(--text-muted); line-height: 1.88; max-width: 100%; margin-bottom: 2rem; }
   .hero-sub strong { color: var(--text); font-weight: 500; }
   .hero-cta { display: flex; gap: 0.8rem; flex-wrap: wrap; }
   .btn { padding: 0.68rem 1.6rem; border-radius: 6px; font-size: 0.86rem; font-weight: 500; cursor: pointer; text-decoration: none; display: inline-block; transition: all var(--transition); font-family: 'DM Sans', sans-serif; }
@@ -65,7 +65,7 @@
   .btn-outline:hover { border-color: var(--mint); color: var(--mint); }
 
   /* HERO STATS */
-  .hero-right { display: flex; flex-direction: column; gap: 1rem; }
+  .hero-right { display: flex; flex-direction: column; gap: 1rem; justify-content: center; }
   .stat-card { background: #fff; border-radius: 12px; padding: 1.2rem 1.4rem; border: 1px solid var(--border); display: flex; align-items: center; gap: 1.1rem; }
   .stat-icon { width: 42px; height: 42px; border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.1rem; }
   .stat-icon.mint { background: var(--mint-light); }
@@ -215,6 +215,7 @@
   /* Tablet: 769px – 1024px */
   @media (max-width: 1024px) {
     .hero { grid-template-columns: 1fr 1fr; gap: 2.5rem; padding: 8rem 2rem 5rem; }
+    .hero-right { max-width: 100%; }
     .finance-inner { grid-template-columns: 240px 1fr; gap: 2rem; }
     .about-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
     .case-grid-3 { grid-template-columns: 1fr 1fr; }
@@ -376,21 +377,10 @@
 <div class="hero-wrap" id="hero">
   <div class="hero">
     <div class="hero-left">
-      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem;">
-        <svg width="64" height="64" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-          <rect width="60" height="60" rx="11" fill="#1a6b5e"/>
-          <path d="M 46 14 A 22 22 0 1 1 46 46" fill="none" stroke="rgba(255,255,255,0.96)" stroke-width="7.5" stroke-linecap="round"/>
-          <circle cx="30" cy="20" r="2.4" fill="#c8890a"/>
-          <path d="M 5 31 C 9 22 13 38 19 29 C 23 23 26 36 31 27 C 35 20 39 32 45 26 C 48 22 52 30 56 27" fill="none" stroke="#1a1a2e" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <div>
-          <div style="font-size:1.25rem;color:var(--text);font-family:'DM Serif Display',serif;font-weight:400;letter-spacing:-0.01em;line-height:1.2;">Dr Lulu Yin</div>
-          <div style="font-size:0.88rem;color:var(--text-muted);margin-top:0.2rem;letter-spacing:0.03em;">Senior UX / CX Researcher</div>
-        </div>
-      </div>
+      
       <h1>Drive better products, services, and businesses through <em>research</em></h1>
       <div class="hero-subtitle">6+ years across Finance, Marketplace, Cultural and Immersive sectors · B2B and B2C · London, UK</div>
-      <p class="hero-sub" style="color:#404040;">I bring experience across both <strong>B2B enterprise products</strong> and <strong>B2C consumer platforms</strong>, spanning banking, fintech, investment, marketplace and cultural sectors. My strongest depth is in regulated financial environments, particularly at <strong>JPMorgan Chase</strong>, where I led strategic B2B research that shaped roadmaps and product decisions at scale. Wherever the context, I translate user insight into clear, commercially grounded recommendations.</p>
+      <p class="hero-sub" style="color:#404040;">Six years across <strong>B2B and B2C</strong> in banking, fintech, investment, marketplace and cultural sectors. Strong specialism in regulated financial environments, including strategic research at <strong>JPMorgan Chase</strong>. I turn user insight into clear, commercially grounded product decisions.</p>
       <div class="hero-cta">
         <a href="#about" class="btn btn-mint">About me</a>
         <a href="#cases" class="btn btn-navy">View case studies</a>
@@ -736,7 +726,7 @@
           <div class="info-card"><h4>Quantitative</h4><ul><li>Surveys</li><li>Customer profiling</li><li>Competitor analysis</li><li>Benchmarking</li><li>Usability ratings</li><li>Analytics review</li></ul></div>
           <div class="info-card"><h4>Strategic</h4><ul><li>Customer segmentation</li><li>JTBD frameworks</li><li>Journey mapping</li><li>Persona creation</li><li>Research roadmaps</li><li>Insight repositories</li><li>Research Ops</li></ul></div>
         </div>
-        <div class="info-card"><h4>Tools</h4><div class="tags-wrap"><span class="method-tag">Figma</span><span class="method-tag">FigJam</span><span class="method-tag">Dovetail</span><span class="method-tag">Confluence</span><span class="method-tag">Jira</span><span class="method-tag">Excel</span></div></div>
+        <div class="info-card"><h4>Tools</h4><div class="tags-wrap"><span class="method-tag">Figma</span><span class="method-tag">FigJam</span><span class="method-tag">Miro</span><span class="method-tag">Dovetail</span><span class="method-tag">UserTesting</span><span class="method-tag">Confluence</span><span class="method-tag">Jira</span><span class="method-tag">Excel</span><span class="method-tag">Claude</span><span class="method-tag">ChatGPT</span><span class="method-tag">Gemini</span></div></div>
       </div>
     </div>
   </div>
@@ -946,6 +936,33 @@ document.addEventListener('DOMContentLoaded',function(){
     }, {passive:true});
     btn.addEventListener('click', function(){
       window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  // ── Hamburger menu ──
+  var hamburger = document.getElementById('nav-hamburger');
+  var mobileMenu = document.getElementById('nav-mobile-menu');
+  function closeMobileMenu(){
+    if(mobileMenu){ mobileMenu.classList.remove('open'); }
+    if(hamburger){ hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); }
+  }
+  if(hamburger && mobileMenu){
+    hamburger.addEventListener('click', function(e){
+      e.stopPropagation();
+      var isOpen = mobileMenu.classList.contains('open');
+      mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(!isOpen));
+    });
+    document.addEventListener('click', function(e){
+      if(!mobileMenu.contains(e.target) && !hamburger.contains(e.target)){
+        closeMobileMenu();
+      }
+    });
+    window.addEventListener('scroll', function(){ closeMobileMenu(); }, {passive:true});
+    // Make mobile menu links close the menu
+    mobileMenu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ closeMobileMenu(); });
     });
   }
 });
