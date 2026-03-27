@@ -212,17 +212,32 @@
 
   /* ── RESPONSIVE ── */
 
+  /* Prevent grid columns overflowing their container on all sizes */
+  .case-grid, .case-grid-3, .about-grid, .hero {
+    width: 100%;
+  }
+  .case-grid  { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .case-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  /* Large desktop ≥1280px: a bit more breathing room */
+  @media (min-width: 1280px) {
+    .hero { max-width: 1200px; }
+    section { max-width: 1200px; }
+    .methods-inner { max-width: 1200px; }
+  }
+
   /* Tablet: 769px – 1024px */
   @media (max-width: 1024px) {
-    .hero { grid-template-columns: 1fr 1fr; gap: 2.5rem; padding: 8rem 2rem 5rem; }
-    .hero-right { max-width: 100%; }
-    .finance-inner { grid-template-columns: 240px 1fr; gap: 2rem; }
-    .about-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-    .case-grid-3 { grid-template-columns: 1fr 1fr; }
-    section { padding: 4.5rem 2rem; }
-    .methods-inner { padding: 4.5rem 2rem; }
-    .finance-banner { padding: 2rem 2rem; }
-    .sector-band { padding: 0.9rem 2rem; }
+    nav { padding: 0 1.5rem; }
+    .hero { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 2.5rem; padding: 8rem 1.8rem 5rem; }
+    .finance-inner { grid-template-columns: 210px minmax(0,1fr); gap: 1.8rem; }
+    .about-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 2rem; }
+    .case-grid  { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .case-grid-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    section { padding: 4.5rem 1.8rem; }
+    .methods-inner { padding: 4.5rem 1.8rem; }
+    .finance-banner { padding: 2rem 1.8rem; }
+    .sector-band { padding: 0.9rem 1.8rem; }
   }
 
   /* Mobile: ≤768px */
@@ -234,26 +249,29 @@
     .nav-hamburger { display: flex; }
     .nav-mobile-menu { top: 58px; }
 
-    /* Hero */
+    /* Hero: single column, brief on top, stats below */
     .hero { grid-template-columns: 1fr; padding: 5.5rem 1.5rem 3.5rem; gap: 2rem; }
+    .hero-left { order: 1; }
+    .hero-right { order: 2; }
     .hero h1 { font-size: clamp(1.85rem, 6vw, 2.8rem); }
     .hero-sub { font-size: 0.9rem; max-width: 100%; }
     .hero-cta { gap: 0.6rem; flex-wrap: wrap; }
     .btn { padding: 0.6rem 1.3rem; font-size: 0.83rem; }
 
     /* Hero stats: 2-column grid */
-    .hero-right { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    .stat-card { padding: 1rem; gap: 0.8rem; }
-    .stat-num { font-size: 1.5rem; }
-    .stat-lbl { font-size: 0.73rem; }
+    .hero-right { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0.75rem; }
+    .stat-card { padding: 1rem; gap: 0.8rem; flex-direction: column; align-items: flex-start; }
+    .stat-num { font-size: 1.4rem; }
+    .stat-lbl { font-size: 0.71rem; }
 
-    /* Finance / Core Expertise */
+    /* Finance */
     .finance-inner { grid-template-columns: 1fr; gap: 1.2rem; }
     .finance-banner { padding: 2rem 1.5rem; }
     .fin-pill { font-size: 0.71rem; }
 
     /* Sector band */
-    .sector-band { padding: 0.8rem 1.5rem; gap: 0.7rem; flex-wrap: wrap; }
+    .sector-band { padding: 0.8rem 1.5rem; gap: 0.6rem; flex-wrap: wrap; }
+    .sector-item { font-size: 0.74rem; }
 
     /* Sections */
     section { padding: 3.5rem 1.5rem; scroll-margin-top: 58px; }
@@ -263,74 +281,98 @@
     /* About */
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
 
-    /* Case study tabs — horizontally scrollable, no wrap */
+    /* Case tabs — horizontal scroll strip */
     .cases-tabs {
-      gap: 0.2rem; overflow-x: auto; flex-wrap: nowrap;
+      gap: 0; overflow-x: auto; flex-wrap: nowrap;
       padding-bottom: 0; -webkit-overflow-scrolling: touch;
-      scrollbar-width: none; margin-left: -1.5rem; margin-right: -1.5rem;
+      scrollbar-width: none;
+      margin-left: -1.5rem; margin-right: -1.5rem;
       padding-left: 1.5rem; padding-right: 1.5rem;
     }
     .cases-tabs::-webkit-scrollbar { display: none; }
-    .case-tab { font-size: 0.74rem; padding: 0.5rem 0.8rem; white-space: nowrap; flex-shrink: 0; }
+    .case-tab { font-size: 0.73rem; padding: 0.5rem 0.85rem; white-space: nowrap; flex-shrink: 0; }
 
-    /* Case content grids */
-    .case-grid { grid-template-columns: 1fr; }
+    /* Case grids — single column */
+    .case-grid  { grid-template-columns: 1fr; }
     .case-grid-3 { grid-template-columns: 1fr; }
     .case-header { grid-template-columns: 1fr; gap: 0.8rem; }
-    .case-badge { align-self: flex-start; }
+    .case-badge { align-self: flex-start; font-size: 0.68rem; }
     .chart-card { padding: 1.1rem; }
-    .info-card { padding: 1.1rem; }
+    .info-card  { padding: 1.1rem; }
     .insight-block { padding: 0.9rem 1rem; }
 
-    /* Research flow steps — vertical stack */
+    /* Chart canvas heights — shorter on mobile */
+    .chart-card canvas { max-height: 260px; }
+
+    /* Research flow — vertical */
     .research-flow { flex-direction: column; gap: 0.5rem; }
-    .flow-step { border-radius: 8px !important; min-width: unset; }
+    .flow-step { border-radius: 8px !important; min-width: unset; width: 100%; }
     .flow-step:not(:last-child)::after { display: none; }
 
-    /* Methods grid */
-    .methods-inner .case-grid { grid-template-columns: 1fr; }
-    .methods-inner .case-grid-3 { grid-template-columns: 1fr 1fr; }
+    /* Methods section */
+    .methods-inner .case-grid  { grid-template-columns: 1fr; }
+    .methods-inner .case-grid-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+    /* Inline grid overrides (phase boxes etc.) */
+    [style*="grid-template-columns:1fr 1fr 1fr"],
+    [style*="grid-template-columns: 1fr 1fr 1fr"] {
+      grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+    }
   }
 
   /* Small phones: ≤480px */
   @media (max-width: 480px) {
     nav { padding: 0 1rem; }
 
-    .hero { padding: 5rem 1.2rem 3rem; }
-    .hero h1 { font-size: clamp(1.6rem, 7.5vw, 2.1rem); }
-    .hero-cta { flex-direction: column; }
-    .hero-cta .btn { text-align: center; width: 100%; box-sizing: border-box; }
+    .hero { padding: 4.8rem 1.1rem 3rem; gap: 1.8rem; }
+    .hero h1 { font-size: clamp(1.55rem, 7.5vw, 2.1rem); }
+    .hero-cta { flex-direction: column; gap: 0.5rem; }
+    .hero-cta .btn { text-align: center; width: 100%; }
 
-    /* Stats: still 2-col but tighter */
-    .hero-right { grid-template-columns: 1fr 1fr; gap: 0.55rem; }
-    .stat-card { padding: 0.85rem 0.9rem; gap: 0.65rem; }
-    .stat-icon { width: 34px; height: 34px; font-size: 0.9rem; }
-    .stat-num { font-size: 1.3rem; }
-    .stat-lbl { font-size: 0.66rem; }
+    /* Stats: 2-col compact */
+    .hero-right { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0.5rem; }
+    .stat-card { padding: 0.8rem; gap: 0.5rem; }
+    .stat-icon { width: 32px; height: 32px; font-size: 0.88rem; flex-shrink: 0; }
+    .stat-num { font-size: 1.2rem; }
+    .stat-lbl { font-size: 0.64rem; }
 
     /* Sections */
-    section { padding: 2.8rem 1.2rem; }
-    .methods-inner { padding: 2.8rem 1.2rem; }
-    .finance-banner { padding: 1.8rem 1.2rem; }
+    section { padding: 2.8rem 1.1rem; }
+    .methods-inner { padding: 2.8rem 1.1rem; }
+    .finance-banner { padding: 1.8rem 1.1rem; }
+    .sector-band { padding: 0.75rem 1.1rem; }
     .section-title { font-size: clamp(1.4rem, 7vw, 1.85rem); }
 
-    /* Finance pills */
-    .fin-pill { font-size: 0.67rem; padding: 0.2rem 0.55rem; }
+    /* Finance */
+    .fin-pill { font-size: 0.65rem; padding: 0.18rem 0.5rem; }
 
     /* Cards */
-    .chart-card, .info-card { padding: 1rem; }
-    .insight-block { padding: 0.8rem 0.9rem; }
-    .case-grid { gap: 0.8rem; }
+    .chart-card, .info-card { padding: 0.9rem; }
+    .insight-block { padding: 0.75rem 0.85rem; }
+    .case-grid { gap: 0.75rem; }
+    .case-tab { font-size: 0.68rem; padding: 0.45rem 0.7rem; }
 
-    /* Journey table scroll */
+    /* Journey table */
     .journey-table { font-size: 0.7rem; }
-    .journey-table th, .journey-table td { padding: 0.5rem 0.6rem; }
+    .journey-table th, .journey-table td { padding: 0.45rem 0.55rem; }
 
-    /* Methods */
+    /* Methods grids collapse fully */
     .methods-inner .case-grid-3 { grid-template-columns: 1fr; }
 
-    /* Phase boxes in case 4 */
-    .phase-boxes { grid-template-columns: 1fr !important; }
+    /* All inline 3-col grids collapse to 1 */
+    [style*="grid-template-columns:1fr 1fr 1fr"],
+    [style*="grid-template-columns: 1fr 1fr 1fr"],
+    [style*="grid-template-columns:repeat(auto-fit,minmax(200px"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* Chart canvas height */
+    .chart-card canvas { max-height: 220px; }
+
+    /* Tags wrap tighter */
+    .tags-wrap { gap: 0.25rem; }
+    .method-tag { font-size: 0.68rem; padding: 0.18rem 0.48rem; }
+    .hmw-tag { font-size: 0.68rem; padding: 0.18rem 0.5rem; }
   }
 </style>
 </head>
@@ -358,7 +400,7 @@
     <li><a href="#about">About Me</a></li>
     <li><a href="#cases">Case Studies</a></li>
     <li><a href="#methods">Methods and Tools</a></li>
-    <li><a id="nav-email" href="mailto:yinlulu07@gmail.com" class="nav-contact">yinlulu07@gmail.com</a></li>
+    <li><a id="nav-email" href="/cdn-cgi/l/email-protection#afd6c6c1c3dac3da9f98efc8c2cec6c381ccc0c2" class="nav-contact"><span class="__cf_email__" data-cfemail="59203037352c352c696e193e34383035773a3634">[email&#160;protected]</span></a></li>
   </ul>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -370,7 +412,7 @@
   <a href="#about" onclick="closeMobileMenu()">About Me</a>
   <a href="#cases" onclick="closeMobileMenu()">Case Studies</a>
   <a href="#methods" onclick="closeMobileMenu()">Methods and Tools</a>
-  <a href="mailto:yinlulu07@gmail.com" style="color:var(--mint);font-weight:500;">yinlulu07@gmail.com</a>
+  <a href="/cdn-cgi/l/email-protection#255c4c4b495049501512654248444c490b464a48" style="color:var(--mint);font-weight:500;"><span class="__cf_email__" data-cfemail="cbb2a2a5a7bea7befbfc8baca6aaa2a7e5a8a4a6">[email&#160;protected]</span></a>
 </div>
 
 <!-- HERO -->
@@ -384,7 +426,7 @@
       <div class="hero-cta">
         <a href="#about" class="btn btn-mint">About me</a>
         <a href="#cases" class="btn btn-navy">View case studies</a>
-        <a id="hero-email" href="mailto:yinlulu07@gmail.com" class="btn btn-outline">yinlulu07@gmail.com</a>
+        <a id="hero-email" href="/cdn-cgi/l/email-protection#e9908087859c859cd9dea98e84888085c78a8684" class="btn btn-outline"><span class="__cf_email__" data-cfemail="b0c9d9dedcc5dcc58087f0d7ddd1d9dc9ed3dfdd">[email&#160;protected]</span></a>
       </div>
     </div>
     <div class="hero-right">
@@ -746,7 +788,7 @@
   <div style="margin-top:1.4rem;font-size:0.71rem;color:var(--text-dim);">Portfolio 2026</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
   var u='yinlulu07',d='gmail.com',e=u+'@'+d;
   var nc=document.getElementById('nav-email');
