@@ -188,6 +188,38 @@
   .method-tag { background: #fff; border: 1px solid var(--border); border-radius: 4px; padding: 0.2rem 0.55rem; font-size: 0.73rem; color: var(--text-muted); }
   .mt-2 { margin-top: 2rem; }
 
+
+  /* ── CHART WRAPPERS ── */
+  /* position:relative + width:100% is the Chart.js requirement */
+  .ch-wrap { position: relative; width: 100%; }
+
+  /* Desktop heights */
+  .ch-bar-std  { height: 245px; }
+  .ch-bar-tall { height: 320px; }
+  .ch-donut    { height: 260px; }
+  .ch-radar    { height: 280px; }
+
+  /* Tablet ≤1024px: slightly shorter tall charts */
+  @media (max-width: 1024px) {
+    .ch-bar-tall { height: 280px; }
+  }
+
+  /* Mobile ≤768px: all charts shrink, tall ones use auto-height via aspect ratio */
+  @media (max-width: 768px) {
+    .ch-bar-std  { height: 200px; }
+    .ch-bar-tall { height: 260px; }
+    .ch-donut    { height: 220px; }
+    .ch-radar    { height: 240px; }
+  }
+
+  /* Small phones ≤480px */
+  @media (max-width: 480px) {
+    .ch-bar-std  { height: 180px; }
+    .ch-bar-tall { height: 220px; }
+    .ch-donut    { height: 200px; }
+    .ch-radar    { height: 210px; }
+  }
+
   /* ── HAMBURGER MENU ── */
   .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
   .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all var(--transition); }
@@ -212,17 +244,32 @@
 
   /* ── RESPONSIVE ── */
 
+  /* Prevent grid columns overflowing their container on all sizes */
+  .case-grid, .case-grid-3, .about-grid, .hero {
+    width: 100%;
+  }
+  .case-grid  { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .case-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  /* Large desktop ≥1280px: a bit more breathing room */
+  @media (min-width: 1280px) {
+    .hero { max-width: 1200px; }
+    section { max-width: 1200px; }
+    .methods-inner { max-width: 1200px; }
+  }
+
   /* Tablet: 769px – 1024px */
   @media (max-width: 1024px) {
-    .hero { grid-template-columns: 1fr 1fr; gap: 2.5rem; padding: 8rem 2rem 5rem; }
-    .hero-right { max-width: 100%; }
-    .finance-inner { grid-template-columns: 240px 1fr; gap: 2rem; }
-    .about-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-    .case-grid-3 { grid-template-columns: 1fr 1fr; }
-    section { padding: 4.5rem 2rem; }
-    .methods-inner { padding: 4.5rem 2rem; }
-    .finance-banner { padding: 2rem 2rem; }
-    .sector-band { padding: 0.9rem 2rem; }
+    nav { padding: 0 1.5rem; }
+    .hero { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 2.5rem; padding: 8rem 1.8rem 5rem; }
+    .finance-inner { grid-template-columns: 210px minmax(0,1fr); gap: 1.8rem; }
+    .about-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 2rem; }
+    .case-grid  { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .case-grid-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    section { padding: 4.5rem 1.8rem; }
+    .methods-inner { padding: 4.5rem 1.8rem; }
+    .finance-banner { padding: 2rem 1.8rem; }
+    .sector-band { padding: 0.9rem 1.8rem; }
   }
 
   /* Mobile: ≤768px */
@@ -234,26 +281,29 @@
     .nav-hamburger { display: flex; }
     .nav-mobile-menu { top: 58px; }
 
-    /* Hero */
+    /* Hero: single column, brief on top, stats below */
     .hero { grid-template-columns: 1fr; padding: 5.5rem 1.5rem 3.5rem; gap: 2rem; }
+    .hero-left { order: 1; }
+    .hero-right { order: 2; }
     .hero h1 { font-size: clamp(1.85rem, 6vw, 2.8rem); }
     .hero-sub { font-size: 0.9rem; max-width: 100%; }
     .hero-cta { gap: 0.6rem; flex-wrap: wrap; }
     .btn { padding: 0.6rem 1.3rem; font-size: 0.83rem; }
 
     /* Hero stats: 2-column grid */
-    .hero-right { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    .stat-card { padding: 1rem; gap: 0.8rem; }
-    .stat-num { font-size: 1.5rem; }
-    .stat-lbl { font-size: 0.73rem; }
+    .hero-right { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0.75rem; }
+    .stat-card { padding: 1rem; gap: 0.8rem; flex-direction: column; align-items: flex-start; }
+    .stat-num { font-size: 1.4rem; }
+    .stat-lbl { font-size: 0.71rem; }
 
-    /* Finance / Core Expertise */
+    /* Finance */
     .finance-inner { grid-template-columns: 1fr; gap: 1.2rem; }
     .finance-banner { padding: 2rem 1.5rem; }
     .fin-pill { font-size: 0.71rem; }
 
     /* Sector band */
-    .sector-band { padding: 0.8rem 1.5rem; gap: 0.7rem; flex-wrap: wrap; }
+    .sector-band { padding: 0.8rem 1.5rem; gap: 0.6rem; flex-wrap: wrap; }
+    .sector-item { font-size: 0.74rem; }
 
     /* Sections */
     section { padding: 3.5rem 1.5rem; scroll-margin-top: 58px; }
@@ -263,74 +313,98 @@
     /* About */
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
 
-    /* Case study tabs — horizontally scrollable, no wrap */
+    /* Case tabs — horizontal scroll strip */
     .cases-tabs {
-      gap: 0.2rem; overflow-x: auto; flex-wrap: nowrap;
+      gap: 0; overflow-x: auto; flex-wrap: nowrap;
       padding-bottom: 0; -webkit-overflow-scrolling: touch;
-      scrollbar-width: none; margin-left: -1.5rem; margin-right: -1.5rem;
+      scrollbar-width: none;
+      margin-left: -1.5rem; margin-right: -1.5rem;
       padding-left: 1.5rem; padding-right: 1.5rem;
     }
     .cases-tabs::-webkit-scrollbar { display: none; }
-    .case-tab { font-size: 0.74rem; padding: 0.5rem 0.8rem; white-space: nowrap; flex-shrink: 0; }
+    .case-tab { font-size: 0.73rem; padding: 0.5rem 0.85rem; white-space: nowrap; flex-shrink: 0; }
 
-    /* Case content grids */
-    .case-grid { grid-template-columns: 1fr; }
+    /* Case grids — single column */
+    .case-grid  { grid-template-columns: 1fr; }
     .case-grid-3 { grid-template-columns: 1fr; }
     .case-header { grid-template-columns: 1fr; gap: 0.8rem; }
-    .case-badge { align-self: flex-start; }
+    .case-badge { align-self: flex-start; font-size: 0.68rem; }
     .chart-card { padding: 1.1rem; }
-    .info-card { padding: 1.1rem; }
+    .info-card  { padding: 1.1rem; }
     .insight-block { padding: 0.9rem 1rem; }
 
-    /* Research flow steps — vertical stack */
+    /* Chart canvas heights — shorter on mobile */
+    .chart-card canvas { max-height: 260px; }
+
+    /* Research flow — vertical */
     .research-flow { flex-direction: column; gap: 0.5rem; }
-    .flow-step { border-radius: 8px !important; min-width: unset; }
+    .flow-step { border-radius: 8px !important; min-width: unset; width: 100%; }
     .flow-step:not(:last-child)::after { display: none; }
 
-    /* Methods grid */
-    .methods-inner .case-grid { grid-template-columns: 1fr; }
-    .methods-inner .case-grid-3 { grid-template-columns: 1fr 1fr; }
+    /* Methods section */
+    .methods-inner .case-grid  { grid-template-columns: 1fr; }
+    .methods-inner .case-grid-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+    /* Inline grid overrides (phase boxes etc.) */
+    [style*="grid-template-columns:1fr 1fr 1fr"],
+    [style*="grid-template-columns: 1fr 1fr 1fr"] {
+      grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+    }
   }
 
   /* Small phones: ≤480px */
   @media (max-width: 480px) {
     nav { padding: 0 1rem; }
 
-    .hero { padding: 5rem 1.2rem 3rem; }
-    .hero h1 { font-size: clamp(1.6rem, 7.5vw, 2.1rem); }
-    .hero-cta { flex-direction: column; }
-    .hero-cta .btn { text-align: center; width: 100%; box-sizing: border-box; }
+    .hero { padding: 4.8rem 1.1rem 3rem; gap: 1.8rem; }
+    .hero h1 { font-size: clamp(1.55rem, 7.5vw, 2.1rem); }
+    .hero-cta { flex-direction: column; gap: 0.5rem; }
+    .hero-cta .btn { text-align: center; width: 100%; }
 
-    /* Stats: still 2-col but tighter */
-    .hero-right { grid-template-columns: 1fr 1fr; gap: 0.55rem; }
-    .stat-card { padding: 0.85rem 0.9rem; gap: 0.65rem; }
-    .stat-icon { width: 34px; height: 34px; font-size: 0.9rem; }
-    .stat-num { font-size: 1.3rem; }
-    .stat-lbl { font-size: 0.66rem; }
+    /* Stats: 2-col compact */
+    .hero-right { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0.5rem; }
+    .stat-card { padding: 0.8rem; gap: 0.5rem; }
+    .stat-icon { width: 32px; height: 32px; font-size: 0.88rem; flex-shrink: 0; }
+    .stat-num { font-size: 1.2rem; }
+    .stat-lbl { font-size: 0.64rem; }
 
     /* Sections */
-    section { padding: 2.8rem 1.2rem; }
-    .methods-inner { padding: 2.8rem 1.2rem; }
-    .finance-banner { padding: 1.8rem 1.2rem; }
+    section { padding: 2.8rem 1.1rem; }
+    .methods-inner { padding: 2.8rem 1.1rem; }
+    .finance-banner { padding: 1.8rem 1.1rem; }
+    .sector-band { padding: 0.75rem 1.1rem; }
     .section-title { font-size: clamp(1.4rem, 7vw, 1.85rem); }
 
-    /* Finance pills */
-    .fin-pill { font-size: 0.67rem; padding: 0.2rem 0.55rem; }
+    /* Finance */
+    .fin-pill { font-size: 0.65rem; padding: 0.18rem 0.5rem; }
 
     /* Cards */
-    .chart-card, .info-card { padding: 1rem; }
-    .insight-block { padding: 0.8rem 0.9rem; }
-    .case-grid { gap: 0.8rem; }
+    .chart-card, .info-card { padding: 0.9rem; }
+    .insight-block { padding: 0.75rem 0.85rem; }
+    .case-grid { gap: 0.75rem; }
+    .case-tab { font-size: 0.68rem; padding: 0.45rem 0.7rem; }
 
-    /* Journey table scroll */
+    /* Journey table */
     .journey-table { font-size: 0.7rem; }
-    .journey-table th, .journey-table td { padding: 0.5rem 0.6rem; }
+    .journey-table th, .journey-table td { padding: 0.45rem 0.55rem; }
 
-    /* Methods */
+    /* Methods grids collapse fully */
     .methods-inner .case-grid-3 { grid-template-columns: 1fr; }
 
-    /* Phase boxes in case 4 */
-    .phase-boxes { grid-template-columns: 1fr !important; }
+    /* All inline 3-col grids collapse to 1 */
+    [style*="grid-template-columns:1fr 1fr 1fr"],
+    [style*="grid-template-columns: 1fr 1fr 1fr"],
+    [style*="grid-template-columns:repeat(auto-fit,minmax(200px"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* Chart canvas height */
+    .chart-card canvas { max-height: 220px; }
+
+    /* Tags wrap tighter */
+    .tags-wrap { gap: 0.25rem; }
+    .method-tag { font-size: 0.68rem; padding: 0.18rem 0.48rem; }
+    .hmw-tag { font-size: 0.68rem; padding: 0.18rem 0.5rem; }
   }
 </style>
 </head>
@@ -437,7 +511,7 @@
       <p style="color:#404040;">I am a <strong>Senior UX/CX Researcher</strong> with over six years of experience across B2B and B2C products, spanning banking, fintech, investment, marketplace and cultural sectors. I specialise in turning user insight into decisions that actually shape products.</p>
       <p style="color:#404040;">My deepest specialism is in regulated financial services. At <strong>JPMorgan Chase</strong>, I led strategic B2B research for enterprise fintech products, directly informing roadmaps and feature prioritisation. At <strong>Capco</strong>, I delivered research for Tier 1 UK banks including NatWest and other major institutions. At <strong>With Intelligence</strong>, I built the customer segmentation model and JTBD framework that guided product and go-to-market strategy.</p>
       <p style="color:#404040;">Currently at <strong>Gumtree</strong>, I research B2C seller behaviour at scale, keeping my thinking grounded in both enterprise complexity and everyday consumer needs.</p>
-      <p style="color:#404040;">I hold a <strong>PhD in Design from Brunel University London</strong> and am based in Uxbridge, UK. I am looking for a senior research role where research genuinely drives product strategy.</p>
+      <p style="color:#404040;">I hold a <strong>PhD in Design from Brunel University London</strong> and am based in London, UK. I am looking for a senior research role where research genuinely drives product strategy.</p>
       <div style="margin-top:1rem;">
         <div style="font-size:0.72rem;color:var(--text-dim);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.08em;font-weight:500;">Sector coverage</div>
         <div>
@@ -521,7 +595,7 @@
     <div class="case-grid">
       <div class="chart-card">
         <h4>Study 1 · E2E Workflow, Responsibility by Team</h4>
-        <div style="position:relative;width:100%;height:245px;"><canvas id="chartWorkflow"></canvas></div>
+        <div class="ch-wrap ch-bar-std"><canvas id="chartWorkflow"></canvas></div>
         <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:0.7rem;font-size:0.72rem;color:var(--text-muted);">
           <span style="display:flex;align-items:center;gap:4px;"><span style="width:9px;height:9px;border-radius:2px;background:#1a6b5e;display:inline-block;"></span>Product Team</span>
           <span style="display:flex;align-items:center;gap:4px;"><span style="width:9px;height:9px;border-radius:2px;background:#2a9d8f;display:inline-block;"></span>Engineering Team</span>
@@ -535,7 +609,7 @@
           <span style="display:flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:#1a6b5e;display:inline-block;flex-shrink:0;"></span>Tier 2: Valuable</span>
           <span style="display:flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:#c8890a;display:inline-block;flex-shrink:0;"></span>Tier 3: Innovative</span>
         </div>
-        <div style="position:relative;width:100%;height:310px;"><canvas id="chartFeatures"></canvas></div>
+        <div class="ch-wrap ch-bar-tall"><canvas id="chartFeatures"></canvas></div>
       </div>
     </div>
 
@@ -583,10 +657,10 @@
     <div class="case-grid">
       <div class="chart-card">
         <h4>Platform Usability Assessment, Key Pain Areas</h4>
-        <div style="position:relative;width:100%;height:245px;"><canvas id="chartBanking"></canvas></div>
+        <div class="ch-wrap ch-bar-std"><canvas id="chartBanking"></canvas></div>
         <p style="font-size:0.75rem;color:var(--text-dim);margin-top:0.7rem;">Severity scores (1 to 5) derived from usability evaluation and customer interviews. Admin function scored highest due to redundant roles, overlong privilege lists and heavy dependency on bank support teams.</p>
       </div>
-      <div class="chart-card"><h4>Redesigned Admin Model, Five User Roles</h4><div style="position:relative;width:100%;height:245px;"><canvas id="chartRoles"></canvas></div></div>
+      <div class="chart-card"><h4>Redesigned Admin Model, Five User Roles</h4><div class="ch-wrap ch-donut"><canvas id="chartRoles"></canvas></div></div>
     </div>
 
     <div class="case-grid-3">
@@ -659,7 +733,7 @@
     </div>
 
     <div class="case-grid">
-      <div class="chart-card"><h4>Opportunities for Gumtree, by Priority</h4><div style="position:relative;width:100%;height:280px;"><canvas id="chartOpportunities"></canvas></div></div>
+      <div class="chart-card"><h4>Opportunities for Gumtree, by Priority</h4><div class="ch-wrap ch-bar-tall"><canvas id="chartOpportunities"></canvas></div></div>
       <div class="info-card"><h4>Key Best Practice Findings from Super Sellers</h4>
         <div class="insight-block"><h5>Creating effective ads</h5><p>High-quality photos with clear backgrounds, key information in the title (price, condition, size), and approachable phrases like "open to reasonable offers" consistently boost click and reply rates. Posting on Fridays and weekends is perceived to generate more responses.</p></div>
         <div class="insight-block gold-border"><h5>Communication that converts</h5><p>Prompt replies, sharing extra photos proactively and maintaining a warm but efficient tone all drive successful outcomes. Sellers who set email auto-replies during unavailable periods do not realise those messages are silently dropped, a gap fixable with a simple platform communication.</p></div>
@@ -686,7 +760,7 @@
 
     <div class="info-card" style="margin-bottom:1.3rem;">
       <h4>Three Research Phases</h4>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:0.8rem;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:0.8rem;">
         <div style="padding:1.05rem;background:var(--navy-light);border-radius:8px;border:1px solid rgba(26,53,102,0.15);"><div style="font-size:0.66rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--navy);margin-bottom:0.35rem;font-weight:600;">Phase 1</div><div style="font-weight:500;color:var(--text);font-size:0.85rem;margin-bottom:0.35rem;">Competitive Landscape</div><div style="font-size:0.77rem;color:var(--text-muted);line-height:1.65;">Desk research on global immersive cultural experiences and practitioner interviews with 14 production experts across the UK and China.</div></div>
         <div style="padding:1.05rem;background:var(--mint-light);border-radius:8px;border:1px solid rgba(26,107,94,0.15);"><div style="font-size:0.66rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--mint);margin-bottom:0.35rem;font-weight:600;">Phase 2</div><div style="font-weight:500;color:var(--text);font-size:0.85rem;margin-bottom:0.35rem;">Audience Landscape</div><div style="font-size:0.77rem;color:var(--text-muted);line-height:1.65;">Parent surveys with 50 families exploring children's museum habits and AR familiarity, plus focus groups with 24 children on interests and painting preferences.</div></div>
         <div style="padding:1.05rem;background:var(--gold-light);border-radius:8px;border:1px solid rgba(200,137,10,0.18);"><div style="font-size:0.66rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);margin-bottom:0.35rem;font-weight:600;">Phase 3</div><div style="font-weight:500;color:var(--text);font-size:0.85rem;margin-bottom:0.35rem;">Design Areas</div><div style="font-size:0.77rem;color:var(--text-muted);line-height:1.65;">Co-design workshops with children to shape the concept, then a field study testing the AR experience through observation, post-session discussion and usability surveys.</div></div>
@@ -694,7 +768,7 @@
     </div>
 
     <div class="case-grid">
-      <div class="chart-card"><h4>Testing Results, Experience Dimensions</h4><div style="position:relative;width:100%;height:265px;"><canvas id="chartGallery"></canvas></div></div>
+      <div class="chart-card"><h4>Testing Results, Experience Dimensions</h4><div class="ch-wrap ch-radar"><canvas id="chartGallery"></canvas></div></div>
       <div>
         <div class="info-card" style="margin-bottom:1rem;"><h4>Key Audience Insights</h4><ul><li style="margin-bottom:0.45rem;">Children in both the UK and China had <strong>limited AR experience but strong enthusiasm</strong> for it once introduced.</li><li style="margin-bottom:0.45rem;">Mobile and tablet games were strongly preferred over PC-based games, informing the decision to build a mobile-first AR experience.</li><li style="margin-bottom:0.45rem;">Art galleries were perceived as less engaging than science museums because of static, non-interactive displays, a direct creative brief.</li><li style="margin-bottom:0.45rem;">Boys were drawn to level progression and rewards; girls preferred avatar customisation. The final concept accommodated both without compromising either.</li></ul></div>
         <div class="info-card"><h4>Cross-Cultural Collaboration Insight</h4><p style="font-size:0.84rem;">UK teams prioritised contracts and research before moving into production. Chinese teams focused more on pre-sales and operated at a faster pace. Bridging these two working cultures required active facilitation of shared creative and strategic goals at every stage and a genuine investment in mutual understanding rather than assuming alignment.</p></div>
@@ -718,10 +792,10 @@
     <div class="case-grid" style="margin-top:2.5rem;">
       <div class="chart-card">
         <h4>Methods Used Across Projects</h4>
-        <div style="position:relative;width:100%;height:310px;"><canvas id="chartMethods"></canvas></div>
+        <div class="ch-wrap ch-bar-tall"><canvas id="chartMethods"></canvas></div>
       </div>
       <div>
-        <div class="case-grid-3" style="margin-bottom:1rem;">
+        <div class="case-grid-3 methods-cards" style="margin-bottom:1rem;">
           <div class="info-card"><h4>Qualitative</h4><ul><li>1:1 user interviews</li><li>Stakeholder interviews</li><li>Focus groups</li><li>Usability testing</li><li>Concept testing</li><li>Co-design workshops</li><li>Observations</li><li>Field studies</li></ul></div>
           <div class="info-card"><h4>Quantitative</h4><ul><li>Surveys</li><li>Customer profiling</li><li>Competitor analysis</li><li>Benchmarking</li><li>Usability ratings</li><li>Analytics review</li></ul></div>
           <div class="info-card"><h4>Strategic</h4><ul><li>Customer segmentation</li><li>JTBD frameworks</li><li>Journey mapping</li><li>Persona creation</li><li>Research roadmaps</li><li>Insight repositories</li><li>Research Ops</li></ul></div>
@@ -741,8 +815,8 @@
     <path d="M 5 31 C 9 22 13 38 19 29 C 23 23 26 36 31 27 C 35 20 39 32 45 26 C 48 22 52 30 56 27" fill="none" stroke="#1a1a2e" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
   <div style="font-family:'DM Serif Display',serif;font-size:1.35rem;color:var(--text);margin-bottom:0.38rem;">Dr Lulu Yin</div>
-  <div style="margin-bottom:0.38rem;color:var(--text-muted);">Senior UX / CX Researcher · Uxbridge, UK</div>
-  <div id="footer-email-wrap">&nbsp;·&nbsp; <strong style="color:var(--text-muted);">+44 (0) 7842 759 517</strong></div>
+  <div style="margin-bottom:0.38rem;color:var(--text-muted);">Senior UX / CX Researcher · London, UK</div>
+  <div id="footer-email-wrap"></div>
   <div style="margin-top:1.4rem;font-size:0.71rem;color:var(--text-dim);">Portfolio 2026</div>
 </footer>
 
