@@ -313,7 +313,7 @@
     /* About */
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
 
-    /* Case tabs — horizontal scroll strip */
+    /* Case tabs  horizontal scroll strip */
     .cases-tabs {
       gap: 0; overflow-x: auto; flex-wrap: nowrap;
       padding-bottom: 0; -webkit-overflow-scrolling: touch;
@@ -324,7 +324,7 @@
     .cases-tabs::-webkit-scrollbar { display: none; }
     .case-tab { font-size: 0.73rem; padding: 0.5rem 0.85rem; white-space: nowrap; flex-shrink: 0; }
 
-    /* Case grids — single column */
+    /* Case grids  single column */
     .case-grid  { grid-template-columns: 1fr; }
     .case-grid-3 { grid-template-columns: 1fr; }
     .case-header { grid-template-columns: 1fr; gap: 0.8rem; }
@@ -333,10 +333,10 @@
     .info-card  { padding: 1.1rem; }
     .insight-block { padding: 0.9rem 1rem; }
 
-    /* Chart canvas heights — shorter on mobile */
+    /* Chart canvas heights  shorter on mobile */
     .chart-card canvas { max-height: 260px; }
 
-    /* Research flow — vertical */
+    /* Research flow  vertical */
     .research-flow { flex-direction: column; gap: 0.5rem; }
     .flow-step { border-radius: 8px !important; min-width: unset; width: 100%; }
     .flow-step:not(:last-child)::after { display: none; }
@@ -416,7 +416,7 @@
     <svg width="40" height="40" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
       <!-- Teal background -->
       <rect width="60" height="60" rx="11" fill="#1a6b5e"/>
-      <!-- White brushstroke arc — opens to the right, ~270° sweep -->
+      <!-- White brushstroke arc  opens to the right, ~270° sweep -->
       <path d="M 46 14 A 22 22 0 1 1 46 46" fill="none" stroke="rgba(255,255,255,0.96)" stroke-width="7.5" stroke-linecap="round"/>
       <!-- Gold ink dot above signature -->
       <circle cx="30" cy="20" r="2.4" fill="#c8890a"/>
@@ -431,7 +431,9 @@
   <ul class="nav-links">
     <li><a href="#about">About Me</a></li>
     <li><a href="#cases">Case Studies</a></li>
-    <li><a href="#methods">Methods and Tools</a></li>
+    <li><a href="#tools">Self-Built Tools</a></li>
+    <li><a href="#methods">Skills and Methods</a></li>
+    <li><a href="https://linkedin.com/in/lulu-yin-phd-878b1392" target="_blank" rel="noopener" class="nav-contact" style="background:var(--navy-light);color:var(--navy);border-color:rgba(26,53,102,0.25);">LinkedIn</a></li>
     <li><a id="nav-email" href="mailto:yinlulu07@gmail.com" class="nav-contact">yinlulu07@gmail.com</a></li>
   </ul>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
@@ -443,7 +445,9 @@
 <div class="nav-mobile-menu" id="nav-mobile-menu">
   <a href="#about" onclick="closeMobileMenu()">About Me</a>
   <a href="#cases" onclick="closeMobileMenu()">Case Studies</a>
-  <a href="#methods" onclick="closeMobileMenu()">Methods and Tools</a>
+  <a href="#tools" onclick="closeMobileMenu()">Self-Built Tools</a>
+  <a href="#methods" onclick="closeMobileMenu()">Skills and Methods</a>
+  <a href="https://linkedin.com/in/lulu-yin-phd-878b1392" target="_blank" rel="noopener" onclick="closeMobileMenu()">LinkedIn</a>
   <a href="mailto:yinlulu07@gmail.com" style="color:var(--mint);font-weight:500;">yinlulu07@gmail.com</a>
 </div>
 
@@ -453,18 +457,18 @@
     <div class="hero-left">
       
       <h1>Drive better products, services, and businesses through <em>research</em></h1>
-      <div class="hero-subtitle">6+ years across Finance, Marketplace, Cultural and Immersive sectors · B2B and B2C · London, UK</div>
-      <p class="hero-sub" style="color:#404040;">Six years across <strong>B2B and B2C</strong> in banking, fintech, investment, marketplace and cultural sectors. Strong specialism in regulated financial environments, including strategic research at <strong>JPMorgan Chase</strong>. I turn user insight into clear, commercially grounded product decisions.</p>
+      <div class="hero-subtitle">7 years across Finance, Marketplace, Cultural and Immersive sectors · B2B and B2C · London, UK</div>
+      <p class="hero-sub" style="color:#404040;">Seven years across <strong>B2B and B2C</strong> in banking, fintech, investment, marketplace and cultural sectors. I integrate <strong>AI tools throughout my research workflow</strong>, from automated synthesis and insight generation to building my own research platforms. Strong specialism in regulated financial environments, including strategic research at <strong>JPMorgan Chase</strong>. I turn user insight into clear, commercially grounded product decisions.</p>
       <div class="hero-cta">
         <a href="#about" class="btn btn-mint">About me</a>
         <a href="#cases" class="btn btn-navy">View case studies</a>
-        <a id="hero-email" href="mailto:yinlulu07@gmail.com" class="btn btn-outline">yinlulu07@gmail.com</a>
+        <a href="#tools" class="btn btn-outline">Self-Built Tools</a>
       </div>
     </div>
     <div class="hero-right">
       <div class="stat-card"><div class="stat-icon gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="7" width="10" height="10" rx="1.5" stroke="#c8890a" stroke-width="1.8"/><line x1="10" y1="7" x2="10" y2="3" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/><line x1="14" y1="7" x2="14" y2="3" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/><line x1="10" y1="21" x2="10" y2="17" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/><line x1="14" y1="21" x2="14" y2="17" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/><line x1="7" y1="10" x2="3" y2="10" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/><line x1="7" y1="14" x2="3" y2="14" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/><line x1="21" y1="10" x2="17" y2="10" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/><line x1="21" y1="14" x2="17" y2="14" stroke="#c8890a" stroke-width="1.6" stroke-linecap="round"/></svg></div><div><div class="stat-num">4+</div><div class="stat-lbl">Years in Banking and Fintech, including JPMorgan Chase</div></div></div>
       <div class="stat-card"><div class="stat-icon navy"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 4 12.8V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.2A7 7 0 0 1 12 2Z" stroke="#1a3566" stroke-width="1.8" stroke-linejoin="round"/><line x1="9.5" y1="21" x2="14.5" y2="21" stroke="#1a3566" stroke-width="1.8" stroke-linecap="round"/><line x1="10.5" y1="18" x2="10.5" y2="21" stroke="#1a3566" stroke-width="1.4" stroke-linecap="round"/><line x1="13.5" y1="18" x2="13.5" y2="21" stroke="#1a3566" stroke-width="1.4" stroke-linecap="round"/><line x1="9" y1="12" x2="15" y2="12" stroke="#1a3566" stroke-width="1.4" stroke-linecap="round"/><line x1="10" y1="9.5" x2="14" y2="9.5" stroke="#1a3566" stroke-width="1.3" stroke-linecap="round"/></svg></div><div><div class="stat-num">B2B+B2C</div><div class="stat-lbl">Enterprise tools to consumer platforms</div></div></div>
-      <div class="stat-card"><div class="stat-icon mint">🔍</div><div><div class="stat-num">6+</div><div class="stat-lbl">Years of end-to-end research across multiple sectors</div></div></div>
+      <div class="stat-card"><div class="stat-icon mint">🔍</div><div><div class="stat-num">7</div><div class="stat-lbl">Years of end-to-end research across multiple sectors</div></div></div>
       <div class="stat-card"><div class="stat-icon gold">🎓</div><div><div class="stat-num">PhD</div><div class="stat-lbl">Design, Brunel University London</div></div></div>
     </div>
   </div>
@@ -478,7 +482,7 @@
       <div class="finance-title">B2B and B2C Research <em>Across Sectors</em></div>
     </div>
     <div>
-      <p class="finance-desc">My experience spans both B2B enterprise products and B2C consumer platforms across banking, fintech, investment, marketplace and cultural sectors. My deepest specialism is in regulated financial services. At <strong>JPMorgan Chase</strong>, I led strategic B2B research across fintech products, shaping roadmap decisions for enterprise tools used by product and operations teams. At Capco I delivered research for Tier 1 UK banks including NatWest and other major institutions. At Gumtree I research consumer selling behaviour at scale. This breadth means I move comfortably between complex enterprise contexts and fast-moving consumer environments.</p>
+      <p class="finance-desc">My experience spans both B2B enterprise products and B2C consumer platforms across banking, fintech, investment, marketplace and cultural sectors. My deepest specialism is in regulated financial services. At <strong>JPMorgan Chase</strong>, I led strategic B2B research across fintech products, shaping roadmap decisions for enterprise tools used by product and operations teams. At Capco I delivered research for Tier 1 UK banks including NatWest and other major institutions. At Gumtree I researched consumer selling behaviour at scale. This breadth means I move comfortably between complex enterprise contexts and fast-moving consumer environments.</p>
       <div class="finance-pills">
         <span class="fin-pill gold">JPMorgan Chase</span>
         <span class="fin-pill gold">Capco</span>
@@ -508,9 +512,9 @@
   <h2 class="section-title">About Me</h2>
   <div class="about-grid">
     <div class="about-text">
-      <p style="color:#404040;">I am a <strong>Senior UX/CX Researcher</strong> with over six years of experience across B2B and B2C products, spanning banking, fintech, investment, marketplace and cultural sectors. I specialise in turning user insight into decisions that actually shape products.</p>
+      <p style="color:#404040;">I am a <strong>Senior UX/CX Researcher</strong> with over seven years of experience across B2B and B2C products, spanning banking, fintech, investment, marketplace and cultural sectors. I specialise in turning user insight into decisions that actually shape products, and actively use AI tools in my research workflow and to build self-made research platforms.</p>
       <p style="color:#404040;">My deepest specialism is in regulated financial services. At <strong>JPMorgan Chase</strong>, I led strategic B2B research for enterprise fintech products, directly informing roadmaps and feature prioritisation. At <strong>Capco</strong>, I delivered research for Tier 1 UK banks including NatWest and other major institutions. At <strong>With Intelligence</strong>, I built the customer segmentation model and JTBD framework that guided product and go-to-market strategy.</p>
-      <p style="color:#404040;">Currently at <strong>Gumtree</strong>, I research B2C seller behaviour at scale, keeping my thinking grounded in both enterprise complexity and everyday consumer needs.</p>
+      <p style="color:#404040;">Most recently at <strong>Gumtree</strong> researching B2C seller behaviour at scale. I now work independently, taking on research contracts and continuing to build self-made tools that sit at the intersection of research practice and product thinking.</p>
       <p style="color:#404040;">I hold a <strong>PhD in Design from Brunel University London</strong> and am based in London, UK. I am looking for a senior research role where research genuinely drives product strategy.</p>
       <div style="margin-top:1rem;">
         <div style="font-size:0.72rem;color:var(--text-dim);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.08em;font-weight:500;">Sector coverage</div>
@@ -520,12 +524,13 @@
       </div>
     </div>
     <div>
-      <div class="exp-item"><div class="exp-dot" style="background:var(--mint)"></div><div><div class="exp-company">Gumtree · London</div><div class="exp-role">UX Researcher</div><div class="exp-date">Oct 2025 to Present</div><span class="exp-sector marketplace">Marketplace</span></div></div>
+      <div class="exp-item"><div class="exp-dot" style="background:var(--gold)"></div><div><div class="exp-company">Freelancer · London</div><div class="exp-role">UX Researcher</div><div class="exp-date">Jul 2026 to Present</div><span class="exp-sector" style="background:var(--gold-light);color:var(--gold);">Freelance</span></div></div>
+      <div class="exp-item"><div class="exp-dot" style="background:var(--mint)"></div><div><div class="exp-company">Gumtree · London</div><div class="exp-role">UX Researcher</div><div class="exp-date">Oct 2025 to Apr 2026</div><span class="exp-sector marketplace">Marketplace</span></div></div>
       <div class="exp-item"><div class="exp-dot" style="background:var(--gold)"></div><div><div class="exp-company">JPMorgan Chase &amp; Co · London</div><div class="exp-role">Senior UX Researcher</div><div class="exp-date">Apr 2024 to Oct 2025</div><span class="exp-sector finance">Banking and Fintech</span></div></div>
       <div class="exp-item"><div class="exp-dot" style="background:var(--gold)"></div><div><div class="exp-company">With Intelligence · London</div><div class="exp-role">Product / CX Researcher</div><div class="exp-date">Dec 2022 to Apr 2024</div><span class="exp-sector finance">Investment and Fintech</span></div></div>
       <div class="exp-item"><div class="exp-dot" style="background:var(--gold)"></div><div><div class="exp-company">Capco · London</div><div class="exp-role">Consultant / UX Researcher</div><div class="exp-date">Mar 2022 to Dec 2022</div><span class="exp-sector finance">Banking Consultancy</span></div></div>
-      <div class="exp-item"><div class="exp-dot" style="background:var(--navy)"></div><div><div class="exp-company">Brunel University London</div><div class="exp-role">UX Researcher, Immersive and Inclusive XR</div><div class="exp-date">Oct 2019 to Mar 2022</div><span class="exp-sector academic">Cultural and Academic</span></div></div>
-      <div class="exp-item" style="border-bottom:none;"><div class="exp-dot" style="background:var(--text-dim)"></div><div><div class="exp-company" style="color:var(--text-muted);">PhD in Design · Brunel University London</div><div class="exp-date">2015 to 2019</div></div></div>
+      <div class="exp-item" style="border-bottom:none;"><div class="exp-dot" style="background:var(--navy)"></div><div><div class="exp-company">Brunel University London</div><div class="exp-role">UX Researcher, Immersive and Inclusive XR</div><div class="exp-date">Oct 2019 to Mar 2022</div><span class="exp-sector academic">Cultural and Academic</span></div></div>
+
     </div>
   </div>
 </section>
@@ -546,127 +551,406 @@
 <section id="cases" style="padding-top:4rem;">
   <div class="section-eyebrow">Selected Work</div>
   <h2 class="section-title">Case Studies</h2>
-  <p class="section-desc">Four projects across B2B fintech, commercial banking, marketplace and cultural research, each showing how I connect user insight to product and business strategy.</p>
+  <p class="section-desc">Four projects across B2B fintech, commercial banking, marketplace, E-commerce and cultural research, each showing how I connect user insight to product and business strategy.</p>
 
   <div class="cases-tabs mt-2">
     <button class="case-tab active" onclick="switchCase(0)">01 · Banking Business Journey Builder</button>
     <button class="case-tab" onclick="switchCase(1)">02 · Commercial Banking Platform</button>
     <button class="case-tab" onclick="switchCase(2)">03 · Gumtree Super Sellers</button>
     <button class="case-tab" onclick="switchCase(3)">04 · National Gallery AR</button>
+    <button class="case-tab" onclick="switchCase(4)">05 · Drunk Elephant UX</button>
   </div>
 
   <!-- CASE 1 -->
   <div class="case-panel active" id="case-0">
+
+    <!-- Header -->
     <div class="case-header">
       <div>
-        <div class="case-title">Banking Business Journey Builder</div>
-        <div class="case-subtitle">Strategic B2B research for Servicing and OKYC product teams · Global Banking and Fintech, London</div>
-        <div class="tags-wrap"><span class="method-tag">Customer Interviews</span><span class="method-tag">Competitor Analysis</span><span class="method-tag">Concept Testing</span><span class="method-tag">B2B Fintech</span><span class="method-tag">Enterprise Tool Design</span></div>
+        <div class="case-title">E2E Research for a Business Journey Builder</div>
+        <div class="case-subtitle">Understanding the workflows, pain points and user needs behind a no-code journey configuration tool · B2B SaaS Banking · London</div>
+        <div class="tags-wrap">
+          <span class="method-tag">Stakeholder Alignment</span>
+          <span class="method-tag">Customer Interviews</span>
+          <span class="method-tag">Competitor Research</span>
+          <span class="method-tag">Workshop Facilitation</span>
+          <span class="method-tag">Concept Testing</span>
+          <span class="method-tag">B2B SaaS</span>
+        </div>
       </div>
       <span class="case-badge gold-badge">Senior UX Researcher · 2024 to 2025</span>
     </div>
 
-    <div class="case-grid">
+    <!-- Context -->
+    <div class="case-grid" style="margin-bottom:1.3rem;">
       <div class="info-card">
-        <h4>The Business Problem</h4>
-        <p>At a bank, building business journeys (the workflows that define how tasks like customer onboarding run end to end) is a core activity for Servicing and OKYC product teams. The current process is heavily engineering-dependent. Product Managers spend significant time translating product requirements into technical specifications, creating repeated back-and-forth cycles, higher implementation risk and consistently long launch timelines.</p>
-      </div>
-      <div class="info-card">
-        <h4>Research Objectives</h4>
-        <p style="margin-bottom:0.6rem;"><strong>Design assumption under investigation:</strong> Empower Product Managers to build and test journeys independently via a no-code UI tool.</p>
-        <ul>
-          <li>What does the current journey configuration workflow actually look like?</li>
-          <li>Which teams are involved at each stage, and what do they own?</li>
-          <li>Where do Product Managers experience the most friction?</li>
-          <li>What would they most need from a configuration tool?</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="info-card" style="margin-bottom:1.3rem;">
-      <h4>Research Approach, Three Studies</h4>
-      <div class="research-flow">
-        <div class="flow-step"><span class="flow-num">11</span><div class="flow-label">Product Managers across Servicing and OKYC</div><div class="flow-method">Study 1 · Customer Interviews</div></div>
-        <div class="flow-step"><span class="flow-num">10</span><div class="flow-label">Leading competitors analysed</div><div class="flow-method">Study 2 · Competitor Analysis</div></div>
-        <div class="flow-step"><span class="flow-num">MVP</span><div class="flow-label">Early concept tested with real users</div><div class="flow-method">Study 3 · Concept Testing</div></div>
-      </div>
-    </div>
-
-    <div class="case-grid">
-      <div class="chart-card">
-        <h4>Study 1 · E2E Workflow, Responsibility by Team</h4>
-        <div class="ch-wrap ch-bar-std"><canvas id="chartWorkflow"></canvas></div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:0.7rem;font-size:0.72rem;color:var(--text-muted);">
-          <span style="display:flex;align-items:center;gap:4px;"><span style="width:9px;height:9px;border-radius:2px;background:#1a6b5e;display:inline-block;"></span>Product Team</span>
-          <span style="display:flex;align-items:center;gap:4px;"><span style="width:9px;height:9px;border-radius:2px;background:#2a9d8f;display:inline-block;"></span>Engineering Team</span>
-          <span style="display:flex;align-items:center;gap:4px;"><span style="width:9px;height:9px;border-radius:2px;background:#c8890a;display:inline-block;"></span>Shared</span>
+        <h4>The Setting</h4>
+        <p style="margin-bottom:0.7rem;">At banks, building business journeys is a core task for the Servicing and OKYC product teams.</p>
+        <div style="display:flex;flex-direction:column;gap:0.6rem;">
+          <div style="padding:0.55rem 0.75rem;background:var(--navy-light);border-radius:6px;">
+            <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--navy);font-weight:700;margin-bottom:0.2rem;">Journeys</div>
+            <div style="font-size:0.82rem;color:var(--text-muted);">Also called workflows or business processes — they define how a task, such as customer onboarding, runs from start to finish.</div>
+          </div>
+          <div style="padding:0.55rem 0.75rem;background:var(--mint-light);border-radius:6px;">
+            <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--mint);font-weight:700;margin-bottom:0.2rem;">Journey Building</div>
+            <div style="font-size:0.82rem;color:var(--text-muted);">Defining the steps of onboarding, how they connect, and how the bank's systems process them.</div>
+          </div>
         </div>
       </div>
+      <div class="info-card">
+        <h4>Research Questions</h4>
+        <p style="margin-bottom:0.6rem;font-size:0.82rem;color:var(--text-dim);font-style:italic;">Assumption: Journey building relies heavily on engineering, creating significant time and budget constraints. Product decision: a no-code configuration tool that lets users build and manage journeys with minimal engineering support.</p>
+        <ol style="margin:0 0 0 1rem;padding:0;font-size:0.84rem;color:var(--text-muted);line-height:1.7;">
+          <li>How do customers build business processes today?</li>
+          <li>How do they collaborate with others?</li>
+          <li>What challenges and workarounds exist today?</li>
+          <li>Which tools do they use?</li>
+          <li>What would a new solution need for successful adoption?</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Research approach flow -->
+    <div class="info-card" style="margin-bottom:1.3rem;">
+      <h4>Research Approach — Aligned with the Product Lifecycle</h4>
+      <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1rem;">Four phases so teams could make confident, insight-driven decisions from discovery through to development.</p>
+      <div class="research-flow">
+        <div class="flow-step" style="background:var(--navy-light);">
+          <div style="font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--navy);font-weight:700;margin-bottom:0.3rem;">Phase 1</div>
+          <span class="flow-num" style="font-size:0.85rem;color:var(--navy);">Stakeholder Alignment</span>
+          <div class="flow-label">Surface assumptions, product goals and propositions; agree the key research questions</div>
+          <div class="flow-method" style="color:var(--navy);">Internal Workshops</div>
+        </div>
+        <div class="flow-step">
+          <div style="font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:700;margin-bottom:0.3rem;">Phase 2</div>
+          <span class="flow-num">28</span>
+          <div class="flow-label">In-depth interviews — senior professionals who own end-to-end journey design and management</div>
+          <div class="flow-method">Customer Research</div>
+        </div>
+        <div class="flow-step">
+          <div style="font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:700;margin-bottom:0.3rem;">Phase 3</div>
+          <span class="flow-num">10</span>
+          <div class="flow-label">Market leaders and newcomers benchmarked across three feature tiers</div>
+          <div class="flow-method">Competitor Research</div>
+        </div>
+        <div class="flow-step" style="background:var(--gold-light);">
+          <div style="font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);font-weight:700;margin-bottom:0.3rem;">Handover</div>
+          <span class="flow-num" style="font-size:0.85rem;color:var(--gold);">Workshop</span>
+          <div class="flow-label">Play back findings and turn insights into specific design actions the squad owns</div>
+          <div class="flow-method" style="color:var(--gold);">Research → Product Handover</div>
+        </div>
+        <div class="flow-step" style="background:var(--mint-light);">
+          <div style="font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--mint);font-weight:700;margin-bottom:0.3rem;">Phase 4</div>
+          <span class="flow-num" style="font-size:0.85rem;color:var(--mint);">Concept Testing</span>
+          <div class="flow-label">Validate the tool's ability to support end-to-end business journey creation</div>
+          <div class="flow-method" style="color:var(--mint);">Task-Based Testing</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 2 findings: journey rollout flow + pain point / user need -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.15rem;margin-bottom:0.3rem;color:var(--text);">Phase 2 · Customer Research Findings</h3>
+    <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1rem;">End-to-end workflow of rolling out a journey: multiple teams and tasks are involved, with Product and Engineering carrying most of the load.</p>
+    <canvas id="chartWorkflow" style="display:none;"></canvas>
+
+    <!-- Journey rollout flow diagram -->
+    <div style="margin-bottom:1.2rem;padding:1.1rem 1.1rem 0.7rem;background:var(--bg2);border-radius:10px;border:1px solid var(--border);">
+      <!-- 5-column grid: owner labels row -->
+      <div style="display:grid;grid-template-columns:repeat(5,1fr) ;gap:0;align-items:end;margin-bottom:0.35rem;">
+        <div style="text-align:center;font-size:0.62rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--mint);font-weight:700;padding-bottom:0.25rem;">Product</div>
+        <div style="text-align:center;font-size:0.62rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--mint);font-weight:700;padding-bottom:0.25rem;">Product</div>
+        <div style="text-align:center;font-size:0.62rem;text-transform:uppercase;letter-spacing:0.07em;color:#c0392b;font-weight:700;padding-bottom:0.25rem;">Engineering</div>
+        <div style="text-align:center;font-size:0.62rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--navy);font-weight:700;padding-bottom:0.25rem;">Product &amp; Engineering</div>
+        <div style="text-align:center;font-size:0.62rem;text-transform:uppercase;letter-spacing:0.07em;color:var(--navy);font-weight:700;padding-bottom:0.25rem;">Engineering</div>
+      </div>
+      <!-- Steps row with arrows -->
+      <div style="display:flex;align-items:center;gap:0;margin-bottom:0.5rem;">
+        <!-- Scope dashed box wrapping steps 1-3 -->
+        <div style="display:flex;align-items:center;flex:3;border:1.5px dashed #2a9d8f;border-radius:9px;padding:0.5rem 0.5rem 1.4rem;position:relative;gap:0;background:rgba(230,245,242,0.25);">
+          <!-- Step 1 -->
+          <div style="flex:1;padding:0.55rem 0.4rem;background:white;border:1.5px solid #c5dbd8;border-radius:7px;text-align:center;font-size:0.8rem;font-weight:600;color:var(--text);line-height:1.3;">Requirement<br>Collection</div>
+          <!-- Arrow -->
+          <div style="flex:0 0 auto;padding:0 0.35rem;font-size:0.85rem;color:#aaa;">→</div>
+          <!-- Step 2 -->
+          <div style="flex:1;padding:0.55rem 0.4rem;background:white;border:1.5px solid #c5dbd8;border-radius:7px;text-align:center;font-size:0.8rem;font-weight:600;color:var(--text);line-height:1.3;">Requirement<br>Translation</div>
+          <!-- Arrow -->
+          <div style="flex:0 0 auto;padding:0 0.35rem;font-size:0.85rem;color:#aaa;">→</div>
+          <!-- Step 3 highlighted -->
+          <div style="flex:1;padding:0.55rem 0.4rem;background:#fff5f5;border:2px solid #e07070;border-radius:7px;text-align:center;font-size:0.8rem;font-weight:700;color:#c0392b;line-height:1.3;">Implementation</div>
+          <!-- Scope label -->
+          <div style="position:absolute;bottom:0.3rem;left:0.5rem;font-size:0.62rem;font-weight:700;color:var(--mint);">Scope for end-to-end configuration</div>
+        </div>
+        <!-- Arrow out of scope box -->
+        <div style="flex:0 0 auto;padding:0 0.35rem;font-size:0.85rem;color:#aaa;margin-bottom:0.9rem;">→</div>
+        <!-- Steps 4 & 5 (outside scope box) -->
+        <div style="display:flex;align-items:center;flex:2;gap:0;padding-bottom:0.9rem;">
+          <!-- Step 4 -->
+          <div style="flex:1;padding:0.55rem 0.4rem;background:white;border:1.5px solid #c5d0e8;border-radius:7px;text-align:center;font-size:0.8rem;font-weight:600;color:var(--text);line-height:1.3;">Testing</div>
+          <!-- Arrow -->
+          <div style="flex:0 0 auto;padding:0 0.35rem;font-size:0.85rem;color:#aaa;">→</div>
+          <!-- Step 5 -->
+          <div style="flex:1;padding:0.55rem 0.4rem;background:white;border:1.5px solid #c5d0e8;border-radius:7px;text-align:center;font-size:0.8rem;font-weight:600;color:var(--text);line-height:1.3;">Production</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pain point + User need cards -->
+    <div class="case-grid" style="margin-bottom:1.3rem;">
+      <div class="info-card" style="border-left:3px solid #c0392b;margin-bottom:0;">
+        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:#c0392b;margin-bottom:0.45rem;">Top Pain Point</div>
+        <p style="font-weight:600;font-size:0.88rem;margin-bottom:0.6rem;">Poor implementation — what gets built drifts from the requirements.</p>
+        <div style="display:flex;flex-direction:column;gap:0.3rem;">
+          <div style="font-size:0.78rem;padding:0.3rem 0.6rem;background:#fff5f5;border-radius:5px;color:var(--text-muted);">⚠️ Requirements lost in translation to engineering specs</div>
+          <div style="font-size:0.78rem;padding:0.3rem 0.6rem;background:#fff5f5;border-radius:5px;color:var(--text-muted);">⚠️ Errors discovered late, after significant investment</div>
+          <div style="font-size:0.78rem;padding:0.3rem 0.6rem;background:#fff5f5;border-radius:5px;color:var(--text-muted);">⚠️ Heavy engineering dependency for every change and test cycle</div>
+        </div>
+      </div>
+      <div class="info-card" style="border-left:3px solid var(--mint);margin-bottom:0;">
+        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--mint);margin-bottom:0.45rem;">Top User Need</div>
+        <p style="font-weight:600;font-size:0.88rem;margin-bottom:0.6rem;">Configure and modify journeys end to end, with less engineering support.</p>
+        <div style="display:flex;flex-direction:column;gap:0.3rem;">
+          <div style="font-size:0.78rem;padding:0.3rem 0.6rem;background:var(--mint-light);border-radius:5px;color:var(--text-muted);">✓ Become autonomous in journey management and testing</div>
+          <div style="font-size:0.78rem;padding:0.3rem 0.6rem;background:var(--mint-light);border-radius:5px;color:var(--text-muted);">✓ Reduce the gap between requirements and what gets built</div>
+          <div style="font-size:0.78rem;padding:0.3rem 0.6rem;background:var(--mint-light);border-radius:5px;color:var(--text-muted);">✓ One platform to configure, test and review without handoffs</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 3: competitor research -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.15rem;margin-bottom:0.9rem;color:var(--text);">Phase 3 · Competitor Research</h3>
+    <div style="margin-bottom:1.3rem;">
       <div class="chart-card">
-        <h4>Study 2 · Competitive Feature Tiers</h4>
+        <h4>Competitive Feature Tiers — 10 Tools Reviewed</h4>
         <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0.75rem;">
-          <span style="display:flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:#1a3566;display:inline-block;flex-shrink:0;"></span>Tier 1: Essential</span>
-          <span style="display:flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:#1a6b5e;display:inline-block;flex-shrink:0;"></span>Tier 2: Valuable</span>
-          <span style="display:flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:#c8890a;display:inline-block;flex-shrink:0;"></span>Tier 3: Innovative</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:#1a3566;display:inline-block;flex-shrink:0;"></span>Tier 1 · Essential</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:#1a6b5e;display:inline-block;flex-shrink:0;"></span>Tier 2 · Valuable</span>
+          <span style="display:flex;align-items:center;gap:4px;font-size:0.7rem;color:var(--text-muted);"><span style="width:10px;height:10px;border-radius:2px;background:#c8890a;display:inline-block;flex-shrink:0;"></span>Tier 3 · Innovative</span>
         </div>
         <div class="ch-wrap ch-bar-tall"><canvas id="chartFeatures"></canvas></div>
       </div>
     </div>
 
-    <div class="case-grid-3">
-      <div class="info-card"><h4>Top User Needs</h4><ul><li>Configure and modify journeys end to end without engineering support</li><li>Reduce dependency on engineering for testing cycles</li><li>Become autonomous in journey management</li></ul></div>
-      <div class="info-card"><h4>Top Pain Points</h4><ul><li>Complex stakeholder management across multiple teams</li><li>Poor translation of product requirements into technical specs</li><li>Time-consuming and fragile testing cycles</li><li>Errors only discovered late in the delivery process</li></ul></div>
-      <div class="info-card"><h4>Key Strategic Insight</h4><p>Customers focus primarily on <strong>modifying existing journeys</strong> rather than building from scratch. This requires fewer resources and creates less risk. Empowering non-technical users to update existing journeys is the highest-value use case and a stronger product proposition than a full journey builder.</p></div>
+    <!-- Handover workshop -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.15rem;margin-bottom:0.9rem;color:var(--text);">Handover Workshop</h3>
+    <div class="case-grid-3" style="margin-bottom:1.3rem;">
+      <div class="info-card" style="border-top:3px solid var(--navy);">
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--navy);font-weight:700;margin-bottom:0.5rem;">Focus Area 1</div>
+        <p style="font-weight:600;margin-bottom:0.3rem;">Close the gap between requirements and implementation</p>
+        <p style="font-size:0.81rem;color:var(--text-muted);">The core issue surfaced by customer research — addressed as the primary design constraint.</p>
+      </div>
+      <div class="info-card" style="border-top:3px solid var(--mint);">
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--mint);font-weight:700;margin-bottom:0.5rem;">Focus Area 2</div>
+        <p style="font-weight:600;margin-bottom:0.3rem;">A feature set that supports effective tool use</p>
+        <p style="font-size:0.81rem;color:var(--text-muted);">Essential features → MVP. Advanced features → longer-term roadmap. Informed by competitor tier research.</p>
+      </div>
+      <div class="info-card" style="border-top:3px solid var(--gold);">
+        <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--gold);font-weight:700;margin-bottom:0.5rem;">Focus Area 3</div>
+        <p style="font-weight:600;margin-bottom:0.3rem;">A user-friendly onboarding process</p>
+        <p style="font-size:0.81rem;color:var(--text-muted);">Helps users — especially first-timers — adopt the tool with ease and reduce ramp-up time.</p>
+      </div>
     </div>
 
-    <div class="info-card"><h4>Product Recommendations</h4><div style="display:flex;flex-wrap:wrap;gap:1.8rem;margin-top:0.6rem;"><div><div style="font-size:0.72rem;color:var(--mint);font-weight:600;margin-bottom:0.45rem;text-transform:uppercase;letter-spacing:0.08em;">Essential features</div><div class="tags-wrap"><span class="hmw-tag">Visualised no-code configuration</span><span class="hmw-tag">Journey simulation and testing</span><span class="hmw-tag">Journey management</span><span class="hmw-tag">Integration connectors</span></div></div><div><div style="font-size:0.72rem;color:var(--gold);font-weight:600;margin-bottom:0.45rem;text-transform:uppercase;letter-spacing:0.08em;">Advanced features</div><div class="tags-wrap"><span class="hmw-tag gold">Built-in templates</span><span class="hmw-tag gold">API integration</span><span class="hmw-tag gold">AI-driven approaches</span></div></div></div></div>
+    <!-- Phase 4: concept testing -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.15rem;margin-bottom:0.9rem;color:var(--text);">Phase 4 · Concept Testing</h3>
+    <div class="case-grid" style="margin-bottom:1.3rem;">
+      <div class="info-card">
+        <h4>Method and Metrics</h4>
+        <p style="font-size:0.8rem;color:var(--text-dim);font-style:italic;margin-bottom:1rem;">Early-stage concept — test focused on fit with users' needs and workflows, not UI details.</p>
+        <div style="margin-bottom:0.75rem;">
+          <div style="font-size:0.64rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--mint);font-weight:700;margin-bottom:0.45rem;">Methods</div>
+          <div class="tags-wrap">
+            <span class="hmw-tag">Task-based sessions</span>
+            <span class="hmw-tag">Observation</span>
+            <span class="hmw-tag">Probing questions</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:0.64rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--navy);font-weight:700;margin-bottom:0.45rem;">Metrics</div>
+          <div class="tags-wrap">
+            <span class="hmw-tag" style="border-color:var(--navy-mid);color:var(--navy);">Task success</span>
+            <span class="hmw-tag" style="border-color:var(--navy-mid);color:var(--navy);">Critical errors</span>
+            <span class="hmw-tag" style="border-color:var(--navy-mid);color:var(--navy);">Ease-of-use rate</span>
+            <span class="hmw-tag" style="border-color:var(--navy-mid);color:var(--navy);">Clarity rate</span>
+            <span class="hmw-tag" style="border-color:var(--navy-mid);color:var(--navy);">Workflow fit</span>
+          </div>
+        </div>
+      </div>
+      <div class="info-card">
+        <h4>What We Learned</h4>
+        <div style="margin-bottom:0.75rem;">
+          <div style="font-size:0.67rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--mint);font-weight:700;margin-bottom:0.3rem;">Key Values of the Tool</div>
+          <ul style="font-size:0.82rem;color:var(--text-muted);margin:0 0 0 1rem;">
+            <li>Adds critical visibility to journey configuration, streamlining it and bridging the gap between design and implementation</li>
+            <li>Has the potential to evolve into a one-stop platform</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-size:0.67rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--navy);font-weight:700;margin-bottom:0.3rem;">Prioritised Improvements</div>
+          <ul style="font-size:0.82rem;color:var(--text-muted);margin:0 0 0 1rem;">
+            <li><strong>P1 · Learnability</strong> — more intuitive navigation and interactions</li>
+            <li><strong>P2 · Functionality</strong> — add core features, e.g. testing and review</li>
+            <li><strong>P2 · Clarity</strong> — let users set up their own access controls</li>
+            <li><strong>P3</strong> — supportive onboarding experience; clearer links between work panels</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Impact -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.15rem;margin-bottom:0.9rem;color:var(--text);">Impact of the Research</h3>
+    <div class="case-grid-3" style="margin-bottom:0.5rem;">
+      <div class="insight-block" style="background:var(--navy-light);border-left:3px solid var(--navy);">
+        <strong style="font-size:0.78rem;color:var(--navy);">Stakeholder Alignment</strong>
+        <p style="margin-top:0.4rem;">Framed the no-code configuration proposition and the questions to answer.</p>
+      </div>
+      <div class="insight-block" style="background:var(--mint-light);border-left:3px solid var(--mint);">
+        <strong style="font-size:0.78rem;color:var(--mint);">Customer + Competitor Research</strong>
+        <p style="margin-top:0.4rem;">Validated the engineering-dependency assumption, set end-to-end configuration as the core need, and tiered the feature set into MVP vs longer-term roadmap.</p>
+      </div>
+      <div class="insight-block" style="background:var(--gold-light);border-left:3px solid var(--gold);">
+        <strong style="font-size:0.78rem;color:var(--gold);">Concept Testing</strong>
+        <p style="margin-top:0.4rem;">Identified the concept's value, usability issues, and fit within existing workflows — pinpointing what makes or breaks adoption of a B2B SaaS product.</p>
+      </div>
+    </div>
+    <p style="font-size:0.82rem;color:var(--text-dim);font-style:italic;text-align:center;padding:0.6rem 0 0.3rem;">The result: a solution designed to fit customers' real workflows, which is what makes or breaks adoption of a B2B SaaS product.</p>
+
   </div>
 
   <!-- CASE 2 -->
   <div class="case-panel" id="case-1">
+    <!-- Header -->
     <div class="case-header">
       <div>
-        <div class="case-title">UX Research for a Tier 1 Commercial Banking Platform</div>
+        <div class="case-title">In-depth Research for NatWest Commercial Banking Platform</div>
         <div class="case-subtitle">Uncovering redesign opportunities for a platform serving corporates, governments and financial institutions · Capco, London</div>
-        <div class="tags-wrap"><span class="method-tag">Usability Evaluation</span><span class="method-tag">Stakeholder Interviews</span><span class="method-tag">Customer Interviews (25)</span><span class="method-tag">Survey (48 responses)</span><span class="method-tag">Commercial Banking</span></div>
+        <div class="tags-wrap">
+          <span class="method-tag">Heuristic Evaluation</span>
+          <span class="method-tag">Stakeholder Interviews</span>
+          <span class="method-tag">Customer Interviews</span>
+          <span class="method-tag">Large-scale Survey</span>
+          <span class="method-tag">Commercial Banking B2B</span>
+        </div>
       </div>
       <span class="case-badge gold-badge">UX Researcher · Capco · 2022</span>
     </div>
 
+    <!-- Context + Research Goal (2-col) -->
     <div class="case-grid">
       <div class="info-card">
-        <h4>The Business Context</h4>
-        <p>A major Tier 1 UK bank had a commercial banking platform designed for finance teams managing money across large organisations, other banks, corporates, governments, schools and charities. The platform had not been redesigned in over twenty years. The bank needed to understand exactly what was breaking down in the experience before committing to a full redesign programme. The platform is role and task-centred, with the admin function sitting at the heart of every other interaction a customer's team has with the product.</p>
+        <h4>The Setting</h4>
+        <p>NatWest's commercial banking platform helps finance teams manage their organisation's money day to day. NatWest is one of Capco's most important clients. An R&amp;D team was set up to deliver a platform redesign — the research goal was to ground that redesign in real user behaviour and experience.</p>
       </div>
       <div class="info-card">
-        <h4>Research Questions</h4>
-        <ul><li>What specific aspects of the platform are causing the most friction for users?</li><li>How does the current platform affect users' ability to complete core banking tasks?</li><li>Which areas, if improved, would deliver the greatest overall UX impact?</li></ul>
-        <div style="margin-top:1rem;"><div style="font-size:0.72rem;color:var(--text-dim);margin-bottom:0.4rem;font-weight:500;">Evaluation dimensions</div><div class="tags-wrap"><span class="method-tag">Learnability</span><span class="method-tag">Navigation</span><span class="method-tag">Clarity</span><span class="method-tag">Interaction design</span><span class="method-tag">Visual design</span></div></div>
+        <h4>Research Goal</h4>
+        <p style="font-style:italic;color:var(--text-muted);margin-bottom:0.9rem;font-size:0.95rem;">"How do users actually work with the platform, and where does the experience create friction?"</p>
+        <p>The challenge was to move beyond a broad improvement mandate and identify where investment would create the most value — for both the business and its customers.</p>
       </div>
     </div>
 
+    <!-- Challenges + Scope Refinement -->
     <div class="info-card" style="margin-bottom:1.3rem;">
-      <h4>Three-Stage Research Plan</h4>
+      <h4>Challenge and Approach</h4>
       <div class="research-flow">
-        <div class="flow-step" style="background:var(--navy-light);"><span class="flow-num" style="font-size:1rem;color:var(--navy);">Stage 1</span><div class="flow-label">Internal review</div><div class="flow-method" style="color:var(--navy);">Usability Evaluation</div></div>
-        <div class="flow-step" style="background:var(--mint-light);"><span class="flow-num" style="font-size:1rem;color:var(--mint);">Stage 2</span><div class="flow-label">External and internal exploration</div><div class="flow-method">Customer Interviews and Surveys · Stakeholder Interviews</div></div>
-        <div class="flow-step" style="background:var(--gold-light);"><span class="flow-num" style="font-size:1rem;color:var(--gold);">Stage 3</span><div class="flow-label">Synthesis</div><div class="flow-method" style="color:var(--gold);">Insight Distillation and Design Recommendations</div></div>
+        <div class="flow-step" style="background:var(--navy-light);">
+          <span class="flow-num" style="color:var(--navy);">Scope</span>
+          <div class="flow-label">"Improve the overall platform" — a broad starting brief with no clear priority</div>
+          <div class="flow-method" style="color:var(--navy);">Original Brief</div>
+        </div>
+        <div class="flow-step" style="background:var(--mint-light);">
+          <span class="flow-num" style="color:var(--mint);">Refined Focus</span>
+          <div class="flow-label">Where should investment focus to create the most value for the business and its users?</div>
+          <div class="flow-method" style="color:var(--mint);">Research Question</div>
+        </div>
+        <div class="flow-step" style="background:var(--gold-light);">
+          <span class="flow-num" style="color:var(--gold);">Trade-off</span>
+          <div class="flow-label">Limited engineering support ruled out a platform-wide overhaul — prioritise the most critical business and user challenges</div>
+          <div class="flow-method" style="color:var(--gold);">Constraint and Decision</div>
+        </div>
       </div>
     </div>
 
-    <div class="case-grid">
-      <div class="chart-card">
-        <h4>Platform Usability Assessment, Key Pain Areas</h4>
+    <!-- Research Approach: Stage 1 and Stage 2 -->
+    <div class="case-grid" style="margin-bottom:1.3rem;">
+      <div class="info-card" style="border-left:3px solid var(--navy);margin-bottom:0;">
+        <h4 style="color:var(--navy);">Stage 1 · Internal Discovery</h4>
+        <p style="margin-bottom:0.75rem;">Built the business view of the platform before going to users.</p>
+        <div class="tags-wrap" style="margin-bottom:0.75rem;">
+          <span class="method-tag">Heuristic Evaluation</span>
+          <span class="method-tag">Stakeholder Interviews</span>
+        </div>
+        <p style="font-size:0.82rem;color:var(--text-dim);">Outputs: evidence framework of platform issues, validated patterns from the business perspective.</p>
+      </div>
+      <div class="info-card" style="border-left:3px solid var(--mint);margin-bottom:0;">
+        <h4 style="color:var(--mint);">Stage 2 · User Research</h4>
+        <p style="margin-bottom:0.75rem;">Captured the user view across daily tasks, team roles, collaboration and friction.</p>
+        <div class="tags-wrap" style="margin-bottom:0.75rem;">
+          <span class="method-tag">1-2-1 Customer Interviews</span>
+          <span class="method-tag">Large-scale Survey</span>
+        </div>
+        <p style="font-size:0.82rem;color:var(--text-dim);">Outputs: quantified recurring themes, validated behavioural patterns, jobs-to-be-done across team types.</p>
+      </div>
+    </div>
+
+    <!-- Finding 1: chart + insight merged, Finding 2: split comparison -->
+    <div class="case-grid" style="margin-bottom:1.3rem;align-items:start;">
+      <!-- Finding 1 -->
+      <div class="info-card" style="border-left:3px solid var(--gold);margin-bottom:0;">
+        <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold);margin-bottom:0.6rem;">Finding 1 · The Shared Pain Point</div>
+        <p style="font-size:0.84rem;color:var(--text-muted);margin-bottom:1rem;"><strong style="color:var(--text);">Account setup</strong> emerged as the critical issue on both sides. For the bank, it consumed significant time and effort from staff supporting customers. For users, it caused disjointed journeys, slower tasks and risk in managing day-to-day finance work — a structural problem, not just a usability one.</p>
         <div class="ch-wrap ch-bar-std"><canvas id="chartBanking"></canvas></div>
-        <p style="font-size:0.75rem;color:var(--text-dim);margin-top:0.7rem;">Severity scores (1 to 5) derived from usability evaluation and customer interviews. Admin function scored highest due to redundant roles, overlong privilege lists and heavy dependency on bank support teams.</p>
+        <canvas id="chartRoles" style="display:none;"></canvas>
       </div>
-      <div class="chart-card"><h4>Redesigned Admin Model, Five User Roles</h4><div class="ch-wrap ch-donut"><canvas id="chartRoles"></canvas></div></div>
+      <!-- Finding 2: small vs large team comparison -->
+      <div class="info-card" style="border-left:3px solid var(--mint);margin-bottom:0;">
+        <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--mint);margin-bottom:0.6rem;">Finding 2 · Same Jobs, Different Ways of Working</div>
+        <p style="font-size:0.84rem;color:var(--text-muted);margin-bottom:1rem;">Both team types used the platform for the same core tasks — but had fundamentally different needs that one rigid setup could not serve.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+          <div style="padding:0.85rem;background:var(--navy-light);border-radius:8px;border:1px solid rgba(26,53,102,0.15);">
+            <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--navy);margin-bottom:0.5rem;">Small Finance Teams</div>
+            <div style="font-size:0.78rem;color:var(--text-muted);line-height:1.65;margin-bottom:0.5rem;">Priority: <strong style="color:var(--text);">flexible access</strong> for every member</div>
+            <div style="font-size:0.75rem;color:var(--navy);font-style:italic;">"Everyone needs to be able to do everything when needed."</div>
+          </div>
+          <div style="padding:0.85rem;background:var(--mint-light);border-radius:8px;border:1px solid rgba(26,107,94,0.15);">
+            <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--mint);margin-bottom:0.5rem;">Large Finance Teams</div>
+            <div style="font-size:0.78rem;color:var(--text-muted);line-height:1.65;margin-bottom:0.5rem;">Priority: <strong style="color:var(--text);">specialised roles</strong> and stronger controls</div>
+            <div style="font-size:0.75rem;color:var(--mint);font-style:italic;">"We need tight control over who can approve what."</div>
+          </div>
+        </div>
+        <div style="margin-top:0.85rem;padding:0.7rem 0.85rem;background:#fef5e4;border-radius:8px;border-left:3px solid var(--gold);">
+          <div style="font-size:0.78rem;color:var(--text-muted);line-height:1.65;"><strong style="color:var(--gold);">The problem:</strong> Both were served by the same rigid setup. The platform was not flexible enough to support different ways of working — a fundamental design gap, not a surface-level issue.</div>
+        </div>
+      </div>
     </div>
 
-    <div class="case-grid-3">
-      <div class="insight-block gold-border"><h5>Critical Finding, The Admin Function</h5><p>The Admin section stood out as the most urgent pain point. Redundant user roles, overlong privilege lists and high dependency on bank support teams were causing real operational errors with genuine financial consequences for customers.</p></div>
-      <div class="insight-block"><h5>Two Distinct Finance Team Mindsets</h5><p><strong>Large finance teams</strong> have clearly defined structures and need role-based access tied to specific responsibilities. <strong>Small finance teams</strong> carry overlapping responsibilities and need broader, more flexible privileges. Both were being served by the same one-size-fits-all admin flow.</p></div>
-      <div class="insight-block navy-border"><h5>Research Outcome</h5><p>The research led to a simplified model: a role-based journey for large teams and a user-based journey for smaller ones, with five predefined user roles replacing the existing privilege lists. This was expected to meaningfully reduce bank support call volume and lower user frustration.</p></div>
+    <!-- Recommendations + Impact -->
+    <div class="info-card" style="border-left:3px solid var(--mint);margin-bottom:1rem;">
+      <h4>Recommendations</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-top:0.75rem;">
+        <div style="padding:0.75rem;background:var(--mint-light);border-radius:8px;">
+          <div style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--mint);margin-bottom:0.3rem;">01</div>
+          <strong style="font-size:0.9rem;">Rethink Account Setup</strong>
+          <p style="font-size:0.83rem;color:var(--text-muted);margin-top:0.3rem;margin-bottom:0;">Redesign user-account and permission management to be adaptable to different team structures — flexible access with the governance finance work needs.</p>
+        </div>
+        <div style="padding:0.75rem;background:var(--navy-light);border-radius:8px;">
+          <div style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--navy);margin-bottom:0.3rem;">02</div>
+          <strong style="font-size:0.9rem;">Broader UI Refresh</strong>
+          <p style="font-size:0.83rem;color:var(--text-muted);margin-top:0.3rem;margin-bottom:0;">Address usability and consistency issues surfaced in research; modernise the overall experience.</p>
+        </div>
+      </div>
+    </div>
+    <div class="info-card" style="border-left:3px solid var(--gold);">
+      <h4>Impact</h4>
+      <div style="margin-bottom:0.7rem;padding:0.65rem 0.8rem;background:var(--gold-light);border-radius:8px;font-size:0.82rem;">
+        <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold);margin-bottom:0.25rem;">Framing Shift</div>
+        <span style="color:var(--text-dim);">"Address a broader set of issues"</span>
+        <span style="margin:0 0.4rem;color:var(--gold);">→</span>
+        <span style="color:var(--text-body);font-weight:500;">"Focus on the most critical issue and make the platform adaptable"</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+        <div style="font-size:0.82rem;color:var(--text-muted);"><strong style="color:var(--navy);">Client side:</strong> clear trade-offs and priorities, broader teams aligned on a user-informed direction, timely delivery with limited engineering, reduced customer support effort.</div>
+        <div style="font-size:0.82rem;color:var(--text-muted);"><strong style="color:var(--mint);">User side:</strong> streamlined user journeys, better overall experience, more efficient day-to-day work.</div>
+      </div>
     </div>
   </div>
 
@@ -678,12 +962,42 @@
         <div class="case-subtitle">Deep-dive into the mindset, behaviour and experience of high-activity sellers · Gumtree, London</div>
         <div class="tags-wrap"><span class="method-tag">Qualitative Interviews</span><span class="method-tag">Behavioural Research</span><span class="method-tag">Journey Mapping</span><span class="method-tag">Opportunity Identification</span></div>
       </div>
-      <span class="case-badge">Lead UX Researcher · Gumtree · 2025 to Present</span>
+      <span class="case-badge">Lead UX Researcher · Gumtree · 2025 to 2026</span>
     </div>
 
     <div class="case-grid">
-      <div class="info-card"><h4>Why This Study Mattered</h4><p>Gumtree had not refreshed its understanding of active sellers for some time and was moving through a significant transitional period. As the lead researcher, I directed a comprehensive exploration of "super sellers", the most active, high-volume users on the platform, to surface their mindsets, behaviours and pain points. The goal was to find opportunities to improve the platform and extend the habits of successful sellers to a wider base.</p></div>
-      <div class="info-card"><h4>Research Objectives</h4><ul><li>Understand what motivates super sellers and what keeps them active</li><li>Analyse how they approach listing, communication and sales</li><li>Map the full post-to-sale journey and identify friction points</li><li>Explore why sellers move to or abandon other platforms</li><li>Generate concrete product opportunities grounded in real behaviour</li></ul></div>
+      <div class="info-card"><h4>Why This Study Mattered</h4><p>Private sellers are a critical part of the marketplace ecosystem. Gumtree had plenty of sellers listing items but little clarity on what set successful sellers apart, or how to help more sellers achieve better outcomes. As lead researcher on a tight timeline, I designed a study to answer: <em>what makes a seller successful, and how can we help more sellers get there?</em> The findings needed to influence several product squads, not just one.</p></div>
+      <div class="info-card"><h4>Research Objectives</h4><ul><li>Understand what motivates super sellers and what keeps them active</li><li>Analyse how they approach listing, communication and sales</li><li>Map the full post-to-sale journey and identify friction points</li><li>Generate concrete product opportunities grounded in real behaviour</li></ul></div>
+    </div>
+
+    <div class="info-card" style="margin-bottom:1.3rem;">
+      <h4>Research Approach, Four Steps</h4>
+      <div class="research-flow">
+        <div class="flow-step" style="background:var(--navy-light);">
+          <div style="font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--navy);font-weight:700;margin-bottom:0.3rem;">Step 1</div>
+          <span class="flow-num" style="font-size:0.88rem;color:var(--navy);">Align</span>
+          <div class="flow-label">Stakeholder alignment — agree scope, identify data sources and known assumptions</div>
+          <div class="flow-method" style="color:var(--navy);">Stakeholder Alignment</div>
+        </div>
+        <div class="flow-step">
+          <div style="font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:700;margin-bottom:0.3rem;">Step 2</div>
+          <span class="flow-num" style="font-size:0.88rem;">Review</span>
+          <div class="flow-label">Synthesise existing seller data, behavioural trends and past research to focus the study</div>
+          <div class="flow-method">Existing Data Review</div>
+        </div>
+        <div class="flow-step" style="background:var(--mint-light);">
+          <div style="font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--mint);font-weight:700;margin-bottom:0.3rem;">Step 3</div>
+          <span class="flow-num" style="font-size:0.88rem;color:var(--mint);">Fieldwork</span>
+          <div class="flow-label">In-depth qualitative interviews with high-activity sellers across key categories</div>
+          <div class="flow-method" style="color:var(--mint);">User Interviews</div>
+        </div>
+        <div class="flow-step" style="background:var(--gold-light);">
+          <div style="font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);font-weight:700;margin-bottom:0.3rem;">Step 4</div>
+          <span class="flow-num" style="font-size:0.88rem;color:var(--gold);">Synthesise</span>
+          <div class="flow-label">Journey mapping, opportunity prioritisation and multi-squad product recommendations</div>
+          <div class="flow-method" style="color:var(--gold);">Synthesis and Recommendations</div>
+        </div>
+      </div>
     </div>
 
     <div class="info-card" style="margin-bottom:1.3rem;">
@@ -726,18 +1040,71 @@
             <tr><td class="phase-cell">Post and Check</td><td>Write the listing, customise the description for the specific item, include key information in the title, then monitor clicks and reply rates.</td><td><div class="pain-item">No suitable category for the item</div><div class="pain-item">Photos do not load on relisted ads (server clears images older than six months but never tells sellers)</div><div class="pain-item">Listing duration too short, sellers want more than 30 days</div><div class="pain-item">New ads do not appear at the top of Manage My Ads</div><div class="pain-item">Group ads are difficult to compose and post</div></td><td><span class="touchpoint-pill">Post an Ad UI</span><span class="touchpoint-pill">Ad performance features</span></td></tr>
             <tr><td class="phase-cell">Respond</td><td>Reply promptly to buyer messages, share additional photos, arrange viewings and confirm meetup details.</td><td><div class="pain-item">Irrelevant or off-topic messages from buyers</div><div class="pain-item">Buyers ask for information already in the listing</div><div class="pain-item">Requests for private information (address, bank details)</div><div class="pain-item">Email auto-replies set by sellers are silently dropped and never reach buyers</div></td><td><span class="touchpoint-pill">Messaging system</span></td></tr>
             <tr><td class="phase-cell">Sell</td><td>Meet at agreed location, provide a viewing, hand over the item. Cash is strongly preferred. Some ship low-value or bundled items.</td><td><div class="pain-item">Unreasonable low-ball offers waste time and create friction</div><div class="pain-item">Buyer protection fees and shipping complexity deter sellers from using the service</div></td><td><span class="touchpoint-pill">Shipping service</span></td></tr>
-            <tr><td class="phase-cell">Re-post</td><td>Re-list unsold items, reconnect with previous buyers who reach out directly, manage repeat sales relationships.</td><td><div class="pain-item">Re-posting is cumbersome and poorly signposted</div><div class="pain-item">Sellers cannot see reviews they have received, no notification or easy navigation</div></td><td><span class="touchpoint-pill">Reposting UI</span></td></tr>
+            <tr><td class="phase-cell">Review</td><td>Re-list unsold items, reconnect with previous buyers, manage repeat sales and check reviews received.</td><td><div class="pain-item">Re-posting is cumbersome and poorly signposted</div><div class="pain-item">Sellers cannot see reviews they have received  no notification or easy navigation to them</div></td><td><span class="touchpoint-pill">Reposting UI</span><span class="touchpoint-pill">Review system</span></td></tr>
           </tbody>
         </table>
       </div>
     </div>
 
-    <div class="case-grid">
-      <div class="chart-card"><h4>Opportunities for Gumtree, by Priority</h4><div class="ch-wrap ch-bar-tall"><canvas id="chartOpportunities"></canvas></div></div>
-      <div class="info-card"><h4>Key Best Practice Findings from Super Sellers</h4>
-        <div class="insight-block"><h5>Creating effective ads</h5><p>High-quality photos with clear backgrounds, key information in the title (price, condition, size), and approachable phrases like "open to reasonable offers" consistently boost click and reply rates. Posting on Fridays and weekends is perceived to generate more responses.</p></div>
-        <div class="insight-block gold-border"><h5>Communication that converts</h5><p>Prompt replies, sharing extra photos proactively and maintaining a warm but efficient tone all drive successful outcomes. Sellers who set email auto-replies during unavailable periods do not realise those messages are silently dropped, a gap fixable with a simple platform communication.</p></div>
-        <div class="insight-block navy-border"><h5>Safe and smooth transactions</h5><p>In-person, cash transactions are strongly preferred because they feel controlled and final. Sellers need the same level of protection as buyers in shipping scenarios. Buyer protection fees on top of shipping costs are actively deterring sellers from using the service.</p></div>
+    <div class="info-card" style="margin-bottom:1.3rem;background:var(--mint-pale);border-color:rgba(26,107,94,0.18);">
+      <h4>Key Finding</h4>
+      <p style="font-style:italic;color:var(--text-muted);margin-bottom:0.5rem;">"Successful sales depend on good practice throughout the entire post-to-sale process, not a single moment."</p>
+      <p style="font-size:0.84rem;">Outcomes were shaped by four factors: <strong>behaviours</strong>, <strong>motivations</strong>, <strong>workflows</strong> and <strong>listing quality</strong>  all mapped across what super sellers do, where things go wrong, touchpoints and opportunities.</p>
+    </div>
+
+    <canvas id="chartOpportunities" style="display:none;"></canvas>
+
+    <!-- Prioritised opportunities with owners -->
+    <div class="case-grid" style="margin-bottom:1.3rem;">
+      <div class="info-card" style="border-left:3px solid var(--mint);margin-bottom:0;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.85rem;">
+          <h4 style="margin-bottom:0;color:var(--mint);">Quick Wins</h4>
+          <span style="font-size:0.72rem;font-weight:700;background:var(--mint-light);color:var(--mint);padding:0.2rem 0.55rem;border-radius:20px;">P0 to P1</span>
+        </div>
+        <div style="display:flex;justify-content:flex-end;margin-bottom:0.5rem;font-size:0.65rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;">Owner</div>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.7rem;background:var(--surface);border-radius:7px;border:1px solid var(--border);"><span style="font-size:0.84rem;font-weight:500;">● Support automated posting</span><span style="font-size:0.75rem;color:var(--mint);font-weight:500;white-space:nowrap;margin-left:0.6rem;">Listing team</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.7rem;background:var(--surface);border-radius:7px;border:1px solid var(--border);"><span style="font-size:0.84rem;font-weight:500;">● Streamline re-post processes</span><span style="font-size:0.75rem;color:var(--mint);font-weight:500;white-space:nowrap;margin-left:0.6rem;">Listing team</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.7rem;background:var(--surface);border-radius:7px;border:1px solid var(--border);"><span style="font-size:0.84rem;font-weight:500;">● Facilitate effective messaging</span><span style="font-size:0.75rem;color:var(--mint);font-weight:500;white-space:nowrap;margin-left:0.6rem;">Messaging team</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.7rem;background:var(--surface);border-radius:7px;border:1px solid var(--border);"><span style="font-size:0.84rem;font-weight:500;color:var(--gold);">● Improve post-transaction service</span><span style="font-size:0.75rem;color:var(--gold);font-weight:500;white-space:nowrap;margin-left:0.6rem;">Customer team</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.7rem;background:var(--surface);border-radius:7px;border:1px solid var(--border);"><span style="font-size:0.84rem;font-weight:500;">● Provide a more effective review system</span><span style="font-size:0.75rem;color:var(--mint);font-weight:500;white-space:nowrap;margin-left:0.6rem;">Trust-building team</span></div>
+        </div>
+      </div>
+      <div class="info-card" style="border-left:3px solid var(--gold);margin-bottom:0;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.85rem;">
+          <h4 style="margin-bottom:0;color:var(--gold);">Longer-term</h4>
+          <span style="font-size:0.72rem;font-weight:700;background:var(--gold-light);color:var(--gold);padding:0.2rem 0.55rem;border-radius:20px;">P2 to P3</span>
+        </div>
+        <div style="display:flex;justify-content:flex-end;margin-bottom:0.5rem;font-size:0.65rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;">Owner</div>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.7rem;background:var(--surface);border-radius:7px;border:1px solid var(--border);"><span style="font-size:0.84rem;font-weight:500;">● Support group posts</span><span style="font-size:0.75rem;color:var(--mint);font-weight:500;white-space:nowrap;margin-left:0.6rem;">Listing team</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.7rem;background:var(--surface);border-radius:7px;border:1px solid var(--border);"><span style="font-size:0.84rem;font-weight:500;">● Provide pay &amp; collect service</span><span style="font-size:0.75rem;color:var(--mint);font-weight:500;white-space:nowrap;margin-left:0.6rem;">Delivery team</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.7rem;background:var(--surface);border-radius:7px;border:1px solid var(--border);"><span style="font-size:0.84rem;font-weight:500;">● Offer robust ad performance reporting</span><span style="font-size:0.75rem;color:var(--mint);font-weight:500;white-space:nowrap;margin-left:0.6rem;">Analytics team</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.7rem;background:var(--surface);border-radius:7px;border:1px solid var(--border);"><span style="font-size:0.84rem;font-weight:500;color:var(--gold);">● Support bundle and set sales</span><span style="font-size:0.75rem;color:var(--gold);font-weight:500;white-space:nowrap;margin-left:0.6rem;">Business leader</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.7rem;background:var(--surface);border-radius:7px;border:1px solid var(--border);"><span style="font-size:0.84rem;font-weight:500;color:var(--gold);">● Support set sales</span><span style="font-size:0.75rem;color:var(--gold);font-weight:500;white-space:nowrap;margin-left:0.6rem;">Business leader</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Impact: 3 cards -->
+    <div class="case-grid-3">
+      <div class="insight-block" style="margin-bottom:0;">
+        <div style="width:2.4rem;height:2.4rem;background:var(--mint-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem;font-size:1.1rem;">📦</div>
+        <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-dim);font-weight:600;margin-bottom:0.25rem;">Impact on</div>
+        <h5 style="color:var(--mint);font-size:1.05rem;margin-bottom:0.65rem;">Product</h5>
+        <ul style="margin:0 0 0 1rem;font-size:0.83rem;line-height:1.7;color:var(--text-muted);"><li>A full picture of what drives and blocks successful sales</li><li>Tied, actionable recommendations across product squads</li></ul>
+      </div>
+      <div class="insight-block" style="margin-bottom:0;">
+        <div style="width:2.4rem;height:2.4rem;background:var(--mint-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem;font-size:1.1rem;">🗺️</div>
+        <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-dim);font-weight:600;margin-bottom:0.25rem;">Impact on</div>
+        <h5 style="color:var(--mint);font-size:1.05rem;margin-bottom:0.65rem;">Business</h5>
+        <ul style="margin:0 0 0 1rem;font-size:0.83rem;line-height:1.7;color:var(--text-muted);"><li>Roadmaps adapted to prioritise the most impactful solutions</li></ul>
+      </div>
+      <div class="insight-block" style="margin-bottom:0;">
+        <div style="width:2.4rem;height:2.4rem;background:var(--mint-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem;font-size:1.1rem;">👥</div>
+        <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-dim);font-weight:600;margin-bottom:0.25rem;">Impact on</div>
+        <h5 style="color:var(--mint);font-size:1.05rem;margin-bottom:0.65rem;">Users</h5>
+        <ul style="margin:0 0 0 1rem;font-size:0.83rem;line-height:1.7;color:var(--text-muted);"><li>Good seller practice socialised across teams, helping more sellers perform better and sell successfully</li></ul>
       </div>
     </div>
   </div>
@@ -780,6 +1147,202 @@
       <div style="font-family:'DM Serif Display',serif;font-size:1.45rem;color:var(--text);margin-bottom:0.75rem;">The Keeper of Paintings</div>
       <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.88;max-width:660px;">An interactive, gamified AR mobile app combining progression levels and a reward system. A neutral guide character, the Keeper of Paintings, leads children through an immersive journey to explore and appreciate artworks at the National Gallery. The story begins with the Keeper losing a magical colour palette. Visitors follow clues hidden inside the paintings to recover it, earning rewards along the way and ultimately earning the title of the new Keeper of Paintings.</p>
       <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;"><span class="hmw-tag navy">Gamified AR mobile experience</span><span class="hmw-tag">Cross-cultural design</span><span class="hmw-tag gold">Child-friendly narrative</span><span class="hmw-tag">Progressive reward system</span><span class="hmw-tag navy">National Gallery launch</span></div>
+      <div style="margin-top:1rem;padding-top:0.9rem;border-top:1px solid var(--border);"><div style="font-size:0.72rem;color:var(--navy);font-weight:600;margin-bottom:0.35rem;text-transform:uppercase;letter-spacing:0.08em;">Outcome</div><p style="font-size:0.82rem;color:var(--text-muted);">The experience launched at the National Gallery and was adopted as a permanent part of its family visitor offering. The cross-cultural research framework was published as part of the StoryFutures programme. <a href="https://www.nationalgallery.org.uk/whats-on/keeper-of-paintings" target="_blank" rel="noopener" style="color:var(--mint);text-decoration:underline;text-underline-offset:2px;">View the project at nationalgallery.org.uk →</a></p></div>
+    </div>
+  </div>
+
+  <!-- CASE 5 -->
+  <div class="case-panel" id="case-4">
+    <div class="case-header">
+      <div>
+        <div class="case-title">Drunk Elephant · E-Commerce UX</div>
+        <div class="case-subtitle">Remote usability study to identify user behaviours, needs and opportunities across the shopping journey · drunkelephant.com</div>
+        <div class="tags-wrap"><span class="method-tag">Remote Usability Study</span><span class="method-tag">Think-Aloud Protocol</span><span class="method-tag">Post-Session Questionnaire</span><span class="method-tag">E-Commerce</span><span class="method-tag">6 Participants</span></div>
+      </div>
+      <span class="case-badge">UX Researcher · Contract · 2026</span>
+    </div>
+    <!-- Context row: Project + Method side by side -->
+    <div class="case-grid" style="margin-bottom:1rem;">
+      <div class="info-card" style="border-left:3px solid var(--mint);margin-bottom:0;">
+        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--mint);margin-bottom:0.5rem;">The Project</div>
+        <p style="font-size:0.83rem;color:var(--text-muted);margin-bottom:0.9rem;line-height:1.7;">Understand what helps or stops first-time shoppers completing a purchase on the Drunk Elephant website — across three journey stages: browse, view product, and checkout.</p>
+        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--mint);margin-bottom:0.45rem;">Research Questions</div>
+        <div style="display:flex;flex-direction:column;gap:0.3rem;">
+          <div style="font-size:0.79rem;padding:0.3rem 0.6rem;background:var(--mint-light);border-radius:5px;color:var(--text-muted);"><strong style="color:var(--mint);">Overall</strong> · Users' impressions of the website</div>
+          <div style="font-size:0.79rem;padding:0.3rem 0.6rem;background:var(--mint-light);border-radius:5px;color:var(--text-muted);"><strong style="color:var(--mint);">Efficiency</strong> · End-to-end shopping completion</div>
+          <div style="font-size:0.79rem;padding:0.3rem 0.6rem;background:var(--mint-light);border-radius:5px;color:var(--text-muted);"><strong style="color:var(--mint);">Ease</strong> · Navigation and interaction</div>
+          <div style="font-size:0.79rem;padding:0.3rem 0.6rem;background:var(--mint-light);border-radius:5px;color:var(--text-muted);"><strong style="color:var(--mint);">Improvements</strong> · Opportunities to improve UX</div>
+        </div>
+      </div>
+      <div class="info-card" style="border-left:3px solid var(--navy);margin-bottom:0;">
+        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--navy);margin-bottom:0.5rem;">Method</div>
+        <div style="display:flex;flex-direction:column;gap:0.3rem;margin-bottom:0.9rem;">
+          <div style="font-size:0.79rem;padding:0.3rem 0.6rem;background:var(--navy-light);border-radius:5px;color:var(--text-muted);">📹 Remote, unmoderated usability study · ~20 min/session</div>
+          <div style="font-size:0.79rem;padding:0.3rem 0.6rem;background:var(--navy-light);border-radius:5px;color:var(--text-muted);">🗣️ Think-aloud + post-session questionnaire</div>
+          <div style="font-size:0.79rem;padding:0.3rem 0.6rem;background:var(--navy-light);border-radius:5px;color:var(--text-muted);">👥 6 female participants, new to Drunk Elephant</div>
+          <div style="font-size:0.79rem;padding:0.3rem 0.6rem;background:var(--navy-light);border-radius:5px;color:var(--text-muted);">🌐 Stimulus: live drunkelephant.com</div>
+        </div>
+        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--navy);margin-bottom:0.45rem;">Testing Tasks</div>
+        <div style="display:flex;flex-direction:column;gap:0.3rem;">
+          <div style="font-size:0.79rem;padding:0.35rem 0.6rem;background:var(--navy-light);border-radius:5px;color:var(--text-muted);"><strong style="color:var(--navy);">Task 1</strong> · Browse &amp; Find without search</div>
+          <div style="font-size:0.79rem;padding:0.35rem 0.6rem;background:var(--navy-light);border-radius:5px;color:var(--text-muted);"><strong style="color:var(--navy);">Task 2</strong> · View product details for purchase decision</div>
+          <div style="font-size:0.79rem;padding:0.35rem 0.6rem;background:var(--navy-light);border-radius:5px;color:var(--text-muted);"><strong style="color:var(--navy);">Task 3</strong> · Complete checkout as guest</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- E2E Score Summary -->
+    <div class="insight-block" style="background:var(--navy-light);border-left:3px solid var(--navy);margin-bottom:1.5rem;">
+      <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--navy);font-weight:600;margin-bottom:0.6rem;">E2E Experience Score · 2.1 / 5</div>
+      <p style="margin-bottom:0.9rem;color:var(--text-muted);font-size:0.88rem;font-style:italic;">The site felt visually appealing but less mature than competitors, held back by technical issues and unconventional UI controls, as well as heavy marketing and cross-selling. Overall difficulty increased from browsing through to checkout.</p>
+      <div class="case-grid-3" style="gap:0.75rem;">
+        <div style="background:white;border-radius:8px;padding:0.9rem;border:1px solid rgba(26,53,102,0.12);">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--navy);font-weight:600;margin-bottom:0.4rem;">Stage 1 · Browse &amp; Find</div>
+          <div style="display:flex;align-items:baseline;gap:0.4rem;margin-bottom:0.55rem;">
+            <div style="font-size:1.35rem;font-weight:700;color:var(--mint);">4.3 / 5</div>
+            <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--mint);font-weight:600;">Ease of Use</div>
+          </div>
+          <div style="font-size:0.79rem;line-height:1.65;">
+            <div style="margin-bottom:0.3rem;"><span style="color:var(--mint);font-weight:600;">✓ Good</span> <span style="color:var(--text-muted);">Intuitive navigation menus, filters and sorting</span></div>
+            <div style="margin-bottom:0.3rem;"><span style="color:#c0392b;font-weight:600;">✗ Poor</span> <span style="color:var(--text-muted);">Navigation menu hidden; size and quantity didn't carry across pages</span></div>
+            <div style="font-style:italic;color:var(--text-dim);font-size:0.75rem;">Pain point: disjointed experience across stages</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:8px;padding:0.9rem;border:1px solid rgba(26,53,102,0.12);">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:var(--gold);font-weight:600;margin-bottom:0.4rem;">Stage 2 · View Product</div>
+          <div style="display:flex;align-items:baseline;gap:0.4rem;margin-bottom:0.55rem;">
+            <div style="font-size:1.35rem;font-weight:700;color:var(--gold);">2.5 / 5</div>
+            <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold);font-weight:600;">Ease of Use</div>
+          </div>
+          <div style="font-size:0.79rem;line-height:1.65;">
+            <div style="margin-bottom:0.3rem;"><span style="color:var(--mint);font-weight:600;">✓ Good</span> <span style="color:var(--text-muted);">Detailed, transparent info on ingredients, benefits, reviews and pricing</span></div>
+            <div style="margin-bottom:0.3rem;"><span style="color:#c0392b;font-weight:600;">✗ Poor</span> <span style="color:var(--text-muted);">Confusing image controls, information overload, images often failed to load</span></div>
+            <div style="font-style:italic;color:var(--text-dim);font-size:0.75rem;">Pain point: difficulty accessing key info for decision-making</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:8px;padding:0.9rem;border:1px solid rgba(200,137,10,0.2);">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.09em;color:#c0392b;font-weight:600;margin-bottom:0.4rem;">Stage 3 · Checkout</div>
+          <div style="display:flex;align-items:baseline;gap:0.4rem;margin-bottom:0.55rem;">
+            <div style="font-size:1.35rem;font-weight:700;color:#c0392b;">1.8 / 5</div>
+            <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.08em;color:#c0392b;font-weight:600;">Ease of Use</div>
+          </div>
+          <div style="font-size:0.79rem;line-height:1.65;">
+            <div style="margin-bottom:0.3rem;"><span style="color:var(--mint);font-weight:600;">✓ Good</span> <span style="color:var(--text-muted);">Free samples and gifts were appreciated</span></div>
+            <div style="margin-bottom:0.3rem;"><span style="color:#c0392b;font-weight:600;">✗ Poor</span> <span style="color:var(--text-muted);">Address book errors and disabled card number field blocked checkout</span></div>
+            <div style="font-style:italic;color:var(--text-dim);font-size:0.75rem;">Pain point: unable to complete the purchase</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Findings -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.25rem;margin-bottom:1rem;color:var(--text);">Key Findings</h3>
+    <div class="case-grid-3" style="margin-bottom:1.5rem;">
+      <div class="insight-block" style="background:var(--mint-light);border-left:3px solid var(--mint);display:flex;flex-direction:column;gap:0.55rem;">
+        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--mint);">Browse &amp; Find</div>
+        <div style="font-size:1rem;font-weight:700;color:var(--text);line-height:1.3;">Findability friction</div>
+        <p style="font-size:0.81rem;color:var(--text-muted);margin:0;line-height:1.65;">Size and quantity choices reset between pages, forcing repeat selections. Look-alike variants confused first-time shoppers. Navigation felt hidden and some dropdowns "spammy."</p>
+        <div style="display:flex;flex-direction:column;gap:0.3rem;margin-top:0.25rem;">
+          <div style="font-size:0.78rem;padding:0.3rem 0.55rem;background:#fff;border-radius:5px;color:var(--text-muted);">🔁 Selections didn't persist across pages</div>
+          <div style="font-size:0.78rem;padding:0.3rem 0.55rem;background:#fff;border-radius:5px;color:var(--text-muted);">👥 Variants too similar to differentiate</div>
+          <div style="font-size:0.78rem;padding:0.3rem 0.55rem;background:#fff;border-radius:5px;color:var(--text-muted);">🗂️ Navigation hidden or clunky</div>
+        </div>
+      </div>
+      <div class="insight-block" style="background:var(--gold-light);border-left:3px solid var(--gold);display:flex;flex-direction:column;gap:0.55rem;">
+        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--gold);">View Product</div>
+        <div style="font-size:1rem;font-weight:700;color:var(--text);line-height:1.3;">Missing "Why?"</div>
+        <p style="font-size:0.81rem;color:var(--text-muted);margin:0;line-height:1.65;">Users needed to know what the product contains, how it works, and whether it suits them — none of this was easy to find.</p>
+        <div style="display:flex;flex-direction:column;gap:0.3rem;margin-top:0.25rem;">
+          <div style="font-size:0.78rem;padding:0.3rem 0.55rem;background:#fff;border-radius:5px;color:var(--text-muted);">🖼️ Product images cut off or drag-to-scroll</div>
+          <div style="font-size:0.78rem;padding:0.3rem 0.55rem;background:#fff;border-radius:5px;color:var(--text-muted);">📋 Ingredients buried below marketing copy</div>
+          <div style="font-size:0.78rem;padding:0.3rem 0.55rem;background:#fff;border-radius:5px;color:var(--text-muted);">❓ "Why is this one different?" unanswered</div>
+        </div>
+      </div>
+      <div class="insight-block" style="background:var(--navy-light);border-left:3px solid var(--navy);display:flex;flex-direction:column;gap:0.55rem;">
+        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--navy);">Checkout</div>
+        <div style="font-size:1rem;font-weight:700;color:var(--text);line-height:1.3;">Technical blockers</div>
+        <p style="font-size:0.81rem;color:var(--text-muted);margin:0;line-height:1.65;">Critical bugs stopped most participants completing the task — making checkout the lowest-rated stage.</p>
+        <div style="display:flex;flex-direction:column;gap:0.3rem;margin-top:0.25rem;">
+          <div style="font-size:0.78rem;padding:0.3rem 0.55rem;background:#fff;border-radius:5px;color:var(--text-muted);">📍 Address confirmed then replaced by checkout</div>
+          <div style="font-size:0.78rem;padding:0.3rem 0.55rem;background:#fff;border-radius:5px;color:var(--text-muted);">💳 Card number field rejected all input</div>
+          <div style="font-size:0.78rem;padding:0.3rem 0.55rem;background:#fff;border-radius:5px;color:var(--text-muted);">🚫 Task completion prevented entirely</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <h3 style="font-family:'DM Serif Display',serif;font-size:1.25rem;margin-bottom:1rem;color:var(--text);">Recommendations</h3>
+    <div class="case-grid-3" style="gap:1rem;margin-bottom:0.5rem;">
+      <div class="info-card" style="border-top:3px solid var(--navy);">
+        <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--navy);font-weight:700;margin-bottom:0.6rem;">Priority 1 — Highest</div>
+        <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.6rem;">Address critical experience issues causing task failures.</p>
+        <ul style="font-size:0.83rem;">
+          <li style="margin-bottom:0.4rem;"><strong>Fix tech blockers:</strong> image loading failures, address mismatch in checkout, card number field not accepting input</li>
+          <li style="margin-bottom:0.4rem;"><strong>Consistent product choices:</strong> carry selected size and quantity across filters, thumbnails and product pages</li>
+          <li><strong>Redesign product page:</strong> improve image gallery (swipe/slide, not drag), surface ingredients and benefits higher, reduce cross-selling clutter</li>
+        </ul>
+      </div>
+      <div class="info-card" style="border-top:3px solid var(--mint);">
+        <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--mint);font-weight:700;margin-bottom:0.6rem;">Priority 2 — Medium</div>
+        <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.6rem;">Address key usability issues making tasks less efficient.</p>
+        <ul style="font-size:0.83rem;">
+          <li style="margin-bottom:0.4rem;"><strong>Improve findability:</strong> make navigation menu more visible and intuitive, balancing collapsed and expanded views</li>
+          <li style="margin-bottom:0.4rem;"><strong>Visual distinction:</strong> make products easier to tell apart on listing page (larger names, stronger visual hierarchy)</li>
+          <li><strong>Responsive design:</strong> ensure pages load and display correctly across different screen sizes and browsers</li>
+        </ul>
+      </div>
+      <div class="info-card" style="border-top:3px solid var(--gold);">
+        <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);font-weight:700;margin-bottom:0.6rem;">Priority 3 — Lower</div>
+        <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.6rem;">Further improve overall experience, engagement and brand perception.</p>
+        <ul style="font-size:0.83rem;">
+          <li style="margin-bottom:0.4rem;"><strong>Experience tone:</strong> move from social-media style to a more professional, caring tone to strengthen brand credibility</li>
+          <li><strong>Next steps:</strong> prioritise improvements by user impact and implementation effort, define success metrics per area, test refined designs with users</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--navy);padding:5rem 2.5rem;border-top:1px solid rgba(255,255,255,0.08);" id="tools">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="section-eyebrow" style="color:var(--gold);"><span style="display:block;width:18px;height:2px;background:var(--gold);border-radius:2px;"></span>Self-Built Products</div>
+    <h2 class="section-title" style="color:white;">AI-Powered Tools I Built</h2>
+    <p style="color:rgba(255,255,255,0.65);max-width:640px;margin-bottom:3rem;font-size:0.97rem;line-height:1.8;">Beyond research, I build  using AI to create research platforms and product tools that bridge the gap between insight and action.</p>
+    <div class="case-grid-3" style="gap:1.5rem;">
+
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.3rem;">
+          <span style="background:var(--mint);color:white;font-size:0.65rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;padding:0.22rem 0.6rem;border-radius:20px;">AI · Prototype</span>
+        </div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.25rem;color:white;">WeLoopin</div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.08em;">AI-Powered UX Research Platform</div>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);letter-spacing:0.06em;margin-top:-0.2rem;">Apr 2026</div>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;line-height:1.75;flex:1;">Self-built AI research platform for automated qualitative analysis, participant synthesis, and insight generation.</p>
+        <a href="https://lululab-tech.github.io/weloopin2" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--mint-mid);font-size:0.84rem;font-weight:500;text-decoration:none;margin-top:auto;">View prototype <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.3rem;">
+          <span style="background:var(--gold);color:white;font-size:0.65rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;padding:0.22rem 0.6rem;border-radius:20px;">AI · Prototype</span>
+        </div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.25rem;color:white;">Unity AI</div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.08em;">AI-Powered Financial Management Platform</div>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);letter-spacing:0.06em;margin-top:-0.2rem;">May 2026</div>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;line-height:1.75;flex:1;">AI-powered corporate tax management platform, supporting complex tax processes through a simple workflow.</p>
+        <a href="https://lululab-tech.github.io/unityai/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--gold-mid);font-size:0.84rem;font-weight:500;text-decoration:none;margin-top:auto;">View prototype <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.3rem;">
+          <span style="background:var(--navy-mid);color:white;font-size:0.65rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;padding:0.22rem 0.6rem;border-radius:20px;">Live</span>
+        </div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.25rem;color:white;">GapBridge</div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.08em;">Cross-Functional Product Practice Platform</div>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);letter-spacing:0.06em;margin-top:-0.2rem;">Jul – Aug 2026</div>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;line-height:1.75;flex:1;">A studio where between-roles tech professionals form short cross-functional teams to ship real product work, so the gap between jobs becomes practice instead of pause.</p>
+        <a href="https://www.gapbridge.app" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;color:rgba(255,255,255,0.8);font-size:0.84rem;font-weight:500;text-decoration:none;margin-top:auto;">Visit GapBridge <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      </div>
+
     </div>
   </div>
 </section>
@@ -788,23 +1351,99 @@
 <div class="methods-bg" id="methods" style="scroll-margin-top:64px;scroll-snap-margin-top:64px;">
   <div class="methods-inner">
     <div class="section-eyebrow" style="color:var(--gold);"><span style="display:block;width:18px;height:2px;background:var(--gold);border-radius:2px;"></span>Research Practice</div>
-    <h2 class="section-title">Methods and Tools</h2>
-    <div class="case-grid" style="margin-top:2.5rem;">
-      <div class="chart-card">
-        <h4>Methods Used Across Projects</h4>
-        <div class="ch-wrap ch-bar-tall"><canvas id="chartMethods"></canvas></div>
-      </div>
-      <div>
-        <div class="case-grid-3 methods-cards" style="margin-bottom:1rem;">
-          <div class="info-card"><h4>Qualitative</h4><ul><li>1:1 user interviews</li><li>Stakeholder interviews</li><li>Focus groups</li><li>Usability testing</li><li>Concept testing</li><li>Co-design workshops</li><li>Observations</li><li>Field studies</li></ul></div>
-          <div class="info-card"><h4>Quantitative</h4><ul><li>Surveys</li><li>Customer profiling</li><li>Competitor analysis</li><li>Benchmarking</li><li>Usability ratings</li><li>Analytics review</li></ul></div>
-          <div class="info-card"><h4>Strategic</h4><ul><li>Customer segmentation</li><li>JTBD frameworks</li><li>Journey mapping</li><li>Persona creation</li><li>Research roadmaps</li><li>Insight repositories</li><li>Research Ops</li></ul></div>
+    <h2 class="section-title">Skills and Methods</h2>
+    <div style="margin-top:2.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem;">
+
+      <div class="info-card">
+        <h4>Research Methods</h4>
+        <div class="tags-wrap" style="margin-top:0.6rem;">
+          <span class="method-tag">Semi-structured Interviews</span>
+          <span class="method-tag">Contextual Enquiry</span>
+          <span class="method-tag">Usability Testing</span>
+          <span class="method-tag">Moderated and Unmoderated</span>
+          <span class="method-tag">Workflow Analysis</span>
+          <span class="method-tag">Concept Validation</span>
+          <span class="method-tag">Diary Studies</span>
+          <span class="method-tag">Survey Design</span>
+          <span class="method-tag">Qualitative Data Analysis</span>
+          <span class="method-tag">Participant Recruitment</span>
+          <span class="method-tag">Observation</span>
         </div>
-        <div class="info-card"><h4>Tools</h4><div class="tags-wrap"><span class="method-tag">Figma</span><span class="method-tag">FigJam</span><span class="method-tag">Miro</span><span class="method-tag">Dovetail</span><span class="method-tag">UserTesting</span><span class="method-tag">Confluence</span><span class="method-tag">Jira</span><span class="method-tag">Excel</span><span class="method-tag">Claude</span><span class="method-tag">ChatGPT</span><span class="method-tag">Gemini</span></div></div>
       </div>
+
+      <div class="info-card">
+        <h4>Strategic Outputs</h4>
+        <div class="tags-wrap" style="margin-top:0.6rem;">
+          <span class="method-tag">Personas</span>
+          <span class="method-tag">Journey Maps</span>
+          <span class="method-tag">Workflow Models</span>
+          <span class="method-tag">Strategic Recommendations</span>
+          <span class="method-tag">Executive Presentations</span>
+          <span class="method-tag">Research Roadmaps</span>
+          <span class="method-tag">Cross-Product Insight Synthesis</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h4>Practice and Operations</h4>
+        <div class="tags-wrap" style="margin-top:0.6rem;">
+          <span class="method-tag">Research Function Setup</span>
+          <span class="method-tag">Research Repository Management</span>
+          <span class="method-tag">Methodology Documentation</span>
+          <span class="method-tag">Scalable Research Frameworks</span>
+          <span class="method-tag">AI Research Workflows</span>
+          <span class="method-tag">GDPR-compliant Research Design</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h4>Cross-functional</h4>
+        <div class="tags-wrap" style="margin-top:0.6rem;">
+          <span class="method-tag">Product Strategy Influence</span>
+          <span class="method-tag">Senior Stakeholder Communication</span>
+          <span class="method-tag">Cross-functional Workshop Facilitation</span>
+          <span class="method-tag">Design and Engineering Partnership</span>
+          <span class="method-tag">Research Culture Development</span>
+          <span class="method-tag">Junior Colleague Coaching</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h4>Domains</h4>
+        <div class="tags-wrap" style="margin-top:0.6rem;">
+          <span class="method-tag">B2B Enterprise Software</span>
+          <span class="method-tag">Technically Complex Products</span>
+          <span class="method-tag">Financial Services</span>
+          <span class="method-tag">Data and Intelligence Platforms</span>
+          <span class="method-tag">Consumer Digital Products</span>
+          <span class="method-tag">Platform and Multi-product Ecosystems</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h4>Tools</h4>
+        <div class="tags-wrap" style="margin-top:0.6rem;">
+          <span class="method-tag">Figma</span>
+          <span class="method-tag">FigJam</span>
+          <span class="method-tag">Miro</span>
+          <span class="method-tag">Dovetail</span>
+          <span class="method-tag">Confluence</span>
+          <span class="method-tag">Jira</span>
+          <span class="method-tag">Excel</span>
+          <span class="method-tag">Notion</span>
+          <span class="method-tag">UserTesting</span>
+          <span class="method-tag">SurveyMonkey</span>
+          <span class="method-tag">Claude</span>
+          <span class="method-tag">ChatGPT</span>
+          <span class="method-tag">Gemini</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
+
+<!-- SELF-BUILT TOOLS -->
 
 <!-- FOOTER -->
 <footer>
@@ -816,8 +1455,9 @@
   </svg>
   <div style="font-family:'DM Serif Display',serif;font-size:1.35rem;color:var(--text);margin-bottom:0.38rem;">Dr Lulu Yin</div>
   <div style="margin-bottom:0.38rem;color:var(--text-muted);">Senior UX / CX Researcher · London, UK</div>
-  <div id="footer-email-wrap"></div>
-  <div style="margin-top:1.4rem;font-size:0.71rem;color:var(--text-dim);">Portfolio 2026</div>
+  <div style="display:flex;align-items:center;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-top:0.4rem;"><div id="footer-email-wrap" style="display:contents;"></div><span style="color:var(--border2);">·</span><a href="https://linkedin.com/in/lulu-yin-phd-878b1392" target="_blank" rel="noopener" style="color:var(--navy);font-size:0.84rem;font-weight:500;">LinkedIn</a></div>
+  <div style="margin-top:1.2rem;display:inline-flex;align-items:center;gap:0.45rem;background:var(--mint-light);border:1px solid rgba(26,107,94,0.2);border-radius:20px;padding:0.3rem 0.85rem;font-size:0.75rem;color:var(--mint);font-weight:600;"><span style="width:7px;height:7px;border-radius:50%;background:var(--mint);display:inline-block;"></span>Available for contract and freelance research</div>
+  <div style="margin-top:0.8rem;font-size:0.71rem;color:var(--text-dim);">Portfolio 2026</div>
 </footer>
 
 <script>
@@ -888,7 +1528,7 @@ function buildChart(id){
   } else if(id==='chartBanking'){
     // Platform usability pain severity by area
     new Chart(el,{type:'bar',data:{
-      labels:['Admin / User Roles','Navigation','Onboarding','System Response','Visual Design'],
+      labels:['Account Setup','Navigation','Onboarding','System Response','Visual Design'],
       datasets:[{
         label:'Pain Severity',
         data:[5,3.5,3,2.5,2],
@@ -900,7 +1540,7 @@ function buildChart(id){
         plugins:{
           legend:{display:false},
           tooltip:{callbacks:{label:function(ctx){
-            var labels=['Critical — most urgent pain point','High — confusing structure','Medium — lacks guided onboarding','Medium — absent feedback cues','Lower — outdated but functional'];
+            var labels=['Critical  most urgent pain point','High  confusing structure','Medium  lacks guided onboarding','Medium  absent feedback cues','Lower  outdated but functional'];
             return labels[ctx.dataIndex];
           }}}
         },
@@ -978,7 +1618,8 @@ var tabCharts=[
   ['chartWorkflow','chartFeatures'],
   ['chartBanking','chartRoles'],
   ['chartOpportunities'],
-  ['chartGallery']
+  ['chartGallery'],
+  []
 ];
 
 function switchCase(idx){
@@ -991,7 +1632,7 @@ document.addEventListener('DOMContentLoaded',function(){
   tabCharts[0].forEach(buildChart);
   buildChart('chartMethods');
 
-  // Back to top — show only after finance banner (Core Expertise section)
+  // Back to top  show only after finance banner (Core Expertise section)
   var btn = document.getElementById('back-to-top');
   var trigger = document.querySelector('.finance-banner');
   if(btn && trigger){
